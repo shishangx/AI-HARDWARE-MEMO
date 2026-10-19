@@ -2,9 +2,9 @@
 
 离线录音、端侧转写、本地摘要、加密二维码与钱包恢复，一部视频了解 Private Memo 的完整使用流程。
 
-[![Private Memo 功能宣传片动态预览](./private-memo-promo-v2-preview.gif)](./private-memo-promo-v2.mp4)
+https://github.com/user-attachments/assets/dcbb3ccd-028c-46b4-9bc1-92d50dde391b
 
-**点击上方动态预览，即可在浏览器中观看带中文解说和背景音乐的完整宣传片，无需下载。**
+使用上方播放器即可观看带中文解说和背景音乐的完整宣传片，无需下载。
 
 - 时长：1 分 46 秒
 - 画面：1920 × 1080，30 fps
