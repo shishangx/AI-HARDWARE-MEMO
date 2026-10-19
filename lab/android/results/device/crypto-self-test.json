@@ -1,0 +1,27 @@
+{
+  "kind": "crypto_self_test",
+  "test_only": true,
+  "timestamp": 1792064400,
+  "plaintext": "离线实验：明天下午三点开会。Android 与 Python 交叉验证。",
+  "test_kek_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+  "nonce_hex": "101112131415161718191a1b",
+  "blob_hex": "03101112131415161718191a1b0a57f90a48e76c24b902973faee96bd1a51257d9a4c211ad4c64828a6088bf7f8adc4d266c35c74b86b97ee838f67f911f8c071e07d2062f499e33147f5e062795cfb2b0629f7ce7b65383b1c0cfe97606da66fadd04afdef4c392b4",
+  "content_hash": "31948fbdadcb4b8b72f27b8af270c14b92da4a181c6265c9ed3c2f6591e38076",
+  "roundtrip": true,
+  "tamper_rejected": true,
+  "qr_roundtrip": true,
+  "environment": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 5134450688,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  }
+}

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>语音备忘录 · 设备模拟</title>
+<style>
+  /* 交互刻意限制为"滚轮 + 按键", 与真实便携硬件一致:
+     没有键盘、没有触摸、没有右键菜单。 */
+  :root {
+    --case-a: #f2f2f2; --case-b: #cfcfcf; --case-line: #a8a8a8;
+    --wheel: #fbfbfb; --wheel-line: #c9c9c9;
+    --screen-bg: #0d120c; --screen-fg: #cfe8c4; --screen-dim: #6d7a68;
+    --hl-bg: #4d7fd6; --hl-fg: #ffffff;
+    --accent: #86c65c;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; min-height: 100%;
+    background: #1b1c1e;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+  }
+  /* 用 min-height + padding 而非 height:100%: 内容高于视口时 flex 居中会把顶部裁掉,
+     必须允许从顶部开始滚动。 */
+  body {
+    display: flex; align-items: center; justify-content: center;
+    padding: 18px 16px;
+  }
+  .stage { display: flex; gap: 28px; align-items: center; }
+
+  /* ---------- 机身 ---------- */
+  .ipod {
+    /* flex: 0 0 auto —— 绝不收缩。这是"模拟真实硬件"的关键:
+       机身在二维码模式下被压过 300→292, 而屏幕分辨率本该固定。 */
+    flex: 0 0 auto;
+    width: 300px; height: 512px; border-radius: 26px;
+    background: linear-gradient(160deg, var(--case-a), var(--case-b));
+    box-shadow: 0 20px 50px rgba(0,0,0,.55), inset 0 1px 0 #fff,
+                inset 0 -2px 6px rgba(0,0,0,.15);
+    padding: 22px 20px; display: flex; flex-direction: column;
+    align-items: center; gap: 20px;
+    border: 1px solid var(--case-line);
+  }
+
+  /* ---------- 屏幕 ---------- */
+  .screen {
+    width: 244px; height: 190px; border-radius: 6px;
+    background: var(--screen-bg); color: var(--screen-fg);
+    border: 2px solid #2a2f27; box-shadow: inset 0 0 22px rgba(0,0,0,.75);
+    display: flex; flex-direction: column; overflow: hidden;
+    font-size: 12px; line-height: 1.35;
+  }
+  .statusbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 3px 7px; font-size: 10px; color: var(--screen-dim);
+    border-bottom: 1px solid #232a20; flex: 0 0 auto;
+  }
+  .statusbar .dot { color: var(--accent); }
+  .titlebar {
+    padding: 4px 8px; font-size: 11px; font-weight: 700;
+    letter-spacing: .3px; background: #182015; color: #dff0d4;
+    border-bottom: 1px solid #232a20; flex: 0 0 auto;
+    display: flex; justify-content: space-between;
+  }
+  .list { flex: 1 1 auto; overflow-y: auto; scrollbar-width: none; }
+  .list::-webkit-scrollbar { display: none; }
+  .row {
+    padding: 5px 9px; display: flex; justify-content: space-between;
+    gap: 8px; border-bottom: 1px solid #1a2116; cursor: default;
+  }
+  .row .sub { color: var(--screen-dim); font-size: 10px; }
+  .row.sel { background: var(--hl-bg); color: var(--hl-fg); }
+  .row.sel .sub { color: #dce7fb; }
+  .row.danger.sel { background: #b3403a; }
+  .pane { padding: 8px 9px; overflow-y: auto; flex: 1 1 auto; font-size: 11px; }
+  .pane::-webkit-scrollbar { display: none; }
+  .pane h4 { margin: 0 0 5px; font-size: 11px; color: var(--accent); font-weight: 700; }
+  .pane .kv { display: flex; gap: 6px; margin-bottom: 3px; }
+  .pane .kv b { color: var(--screen-dim); font-weight: 400; flex: 0 0 auto; }
+  .pane .kv span { word-break: break-all; }
+  .pane .text { white-space: pre-wrap; line-height: 1.5; margin-top: 4px; }
+  .empty { padding: 14px 9px; color: var(--screen-dim); text-align: center; }
+  .acts { border-top: 1px solid #2b3327; flex: 0 0 auto; }
+  .row.action { color: #a9c39c; }
+  .row.action.sel { color: var(--hl-fg); }
+
+  /* ---------- 滚轮 ---------- */
+  .wheel {
+    position: relative; width: 178px; height: 178px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 40%, #ffffff, var(--wheel));
+    border: 1px solid var(--wheel-line);
+    box-shadow: inset 0 2px 6px rgba(0,0,0,.10), 0 3px 10px rgba(0,0,0,.18);
+    flex: 0 0 auto; touch-action: none; cursor: grab;
+  }
+  .wheel:active { cursor: grabbing; }
+  .wbtn {
+    position: absolute; background: none; border: 0; cursor: pointer;
+    color: #6b6b6b; font-size: 13px; font-weight: 700;
+    font-family: inherit; letter-spacing: .5px;
+    display: flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .wbtn:hover { color: #2b2b2b; }
+  .wbtn:active { color: var(--hl-bg); }
+  .wbtn.menu  { top: 7px;    left: 50%; transform: translateX(-50%); width: 70px; height: 26px; font-size: 10px; }
+  .wbtn.prev  { left: 9px;   top: 50%;  transform: translateY(-50%); width: 30px; height: 40px; }
+  .wbtn.next  { right: 9px;  top: 50%;  transform: translateY(-50%); width: 30px; height: 40px; }
+  .wbtn.play  { bottom: 7px; left: 50%; transform: translateX(-50%); width: 70px; height: 26px; }
+  .center {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 62px; height: 62px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 35%, #fdfdfd, #e2e2e2);
+    border: 1px solid var(--wheel-line);
+    box-shadow: inset 0 1px 3px rgba(0,0,0,.12), 0 1px 3px rgba(0,0,0,.14);
+    cursor: pointer;
+  }
+  .center:active { background: radial-gradient(circle at 50% 35%, #e6e6e6, #d0d0d0); }
+  .center.rec { background: radial-gradient(circle at 50% 35%, #ff8a80, #d32f2f); border-color: #b71c1c; }
+
+  /* ---------- 侧栏说明 ---------- */
+  .notes { width: 260px; color: #8b8f95; font-size: 11.5px; line-height: 1.7; }
+  .notes h3 { color: #d6dade; font-size: 12px; margin: 0 0 8px; letter-spacing: .4px; }
+  .notes code { color: var(--accent); background: #23262a; padding: 1px 4px; border-radius: 3px; }
+  .notes ul { margin: 6px 0 14px; padding-left: 16px; }
+  .notes .key { color: #c8ccd0; }
+  .notes .sev { color: #e0a458; }
+
+  /* ---------- 输入浮层 (硬件上应为滚轮选字) ---------- */
+  .overlay {
+    position: fixed; inset: 0; background: rgba(0,0,0,.65);
+    display: none; align-items: center; justify-content: center; z-index: 20;
+  }
+  .overlay.on { display: flex; }
+  .dialog {
+    background: #23262b; border: 1px solid #3a3f46; border-radius: 8px;
+    padding: 16px; width: 320px; color: #e6e9ec; font-size: 12px;
+  }
+  .dialog h4 { margin: 0 0 10px; font-size: 12px; font-weight: 600; }
+  .dialog input {
+    width: 100%; padding: 7px 9px; border-radius: 5px; font-family: inherit;
+    border: 1px solid #464c54; background: #17191c; color: #e6e9ec; font-size: 12px;
+  }
+  .dialog .hint { color: #7d838b; font-size: 10.5px; margin-top: 7px; line-height: 1.5; }
+  .dialog .msg { color: #c8ccd0; font-size: 11.5px; line-height: 1.6; margin-bottom: 10px; }
+  .dialog .msg:empty { display: none; }
+  .dialog .acts { display: flex; gap: 8px; justify-content: flex-end; margin-top: 12px; }
+
+  /* ---------- 二维码面板 ----------
+     显示在设备**旁边**, 而不是把机身放大去容纳它。真实硬件的屏幕分辨率是固定的,
+     放大机身等于掩盖了这个约束; 而且切换时整个页面会跳动。设备尺寸因此始终不变。
+     占用说明列的位置, 避免页面变宽溢出。 */
+  /* flex: 0 1 420px —— 允许收缩: 固定宽度会在窄窗口里被挤压, 而里面的二维码盒
+     是固定尺寸, 于是横向溢出(实测 22px)。收缩后由下面的 aspect-ratio 保持方形。 */
+  .qr-panel { display: none; flex: 0 1 420px; min-width: 0;
+              flex-direction: column; align-items: center; gap: 10px;
+              padding: 14px 16px 16px; border-radius: 26px;
+              background: linear-gradient(170deg, #2a2e34, #1f2227);
+              border: 1px solid #3a3f46;
+              box-shadow: 0 18px 44px rgba(0,0,0,.5), inset 0 1px 0 #454b53; }
+  .qr-panel.on { display: flex; }
+  /* 顶部那条听筒/摄像头示意，让它一眼被读成"手机"而不是"设备" */
+  .qr-notch { width: 74px; height: 5px; border-radius: 3px;
+              background: #454b53; flex: 0 0 auto; }
+  .stage.qr .notes { display: none; }
+  .qr-head { color: #d6dade; font-size: 12px; text-align: center; line-height: 1.5; }
+  /* width:100% + max-width:400px + aspect-ratio: 窄窗口下缩的是二维码本身。
+     不能用固定 width:400px —— 那样它的 min-content 就是 400, 面板压不下去,
+     收缩量会转嫁给设备(实测设备被压 300→292)。
+     aspect-ratio 保证正方形: 非等比缩放的二维码扫不出来。 */
+  .qr-img { background: #fff; border-radius: 6px; padding: 10px;
+            width: 100%; max-width: 400px; aspect-ratio: 1 / 1;
+            flex: 0 1 auto; min-width: 0; box-sizing: border-box;
+            display: flex; align-items: center; justify-content: center; }
+  .qr-img svg { width: 100%; height: 100%; display: block; }
+  .qr-meta { font-size: 11px; color: #8b8f95; text-align: center; line-height: 1.6; }
+  .qr-meta b { color: var(--accent); }
+  .qr-meta .dense { color: #e0a458; }
+  .qr-transport { font-size: 10.5px; color: #868d95; line-height: 1.65;
+                  text-align: center; flex: 0 0 auto; }
+  .qr-transport b { color: #c8ccd0; }
+  .qr-transport .warn { color: #e0a458; }
+  .qr-diag { font-size: 10.5px; line-height: 1.5; width: 100%;
+             border-radius: 5px; padding: 6px 9px; }
+  .qr-diag.error { background: #3a1c1a; color: #ff9a90; border: 1px solid #7a2f2a; }
+  .qr-diag.warn { background: #3a3220; color: #e8bc7a; border: 1px solid #7a6230; }
+  .qr-diag.ok { background: #1c3a24; color: #9ce8b4; border: 1px solid #2f7a46; }
+  .qr-diag b { display: block; font-weight: 400; }
+  .qr-diag .fix { color: #e8eef6; word-break: break-all; display: block; }
+  .dialog button {
+    font-family: inherit; font-size: 11.5px; padding: 6px 14px; border-radius: 5px;
+    border: 1px solid #464c54; background: #2c3038; color: #d6dade; cursor: pointer;
+  }
+  .dialog button.primary { background: var(--hl-bg); border-color: #3f6ab5; color: #fff; }
+</style>
+</head>
+<body>
+<div class="stage">
+  <div class="ipod">
+    <div class="screen">
+      <div class="statusbar">
+        <span id="status-left">就绪</span>
+        <span id="status-right"></span>
+      </div>
+      <div class="titlebar">
+        <span id="title">主菜单</span>
+        <span id="title-right"></span>
+      </div>
+      <div class="list" id="list"></div>
+    </div>
+    <div class="wheel" id="wheel">
+      <button class="wbtn menu" id="b-menu">MENU</button>
+      <button class="wbtn prev" id="b-prev">◀◀</button>
+      <button class="wbtn next" id="b-next">▶▶</button>
+      <button class="wbtn play" id="b-play">▶ / ❚❚</button>
+      <button class="center" id="b-center" title="选择"></button>
+    </div>
+  </div>
+
+  <div class="qr-panel" id="qrPanel"></div>
+
+  <div class="notes">
+    <h3>操作方式</h3>
+    <ul>
+      <li><span class="key">滚轮拖拽 / 鼠标滚轮</span> — 上下移动</li>
+      <li><span class="key">中心键</span> — 确认 / 进入</li>
+      <li><span class="key">MENU</span> — 返回上一级</li>
+      <li><span class="key">▶ / ❚❚</span> — 播放 / 暂停</li>
+      <li><span class="key">◀◀ ▶▶</span> — 播放中快退 / 快进</li>
+    </ul>
+    <h3>当前实现</h3>
+    <ul>
+      <li>录制 · 播放 · 重命名 · 删除</li>
+      <li>录音转文字（本地 R2T2 / Paraformer / SenseVoice）</li>
+      <li>生成 SHA-256 签名载荷</li>
+      <li>生成上链二维码（扫描后在 imToken 内签名）</li>
+      <li id="note-denoise">降噪 — <span id="dn-state">检测中</span></li>
+    </ul>
+    <h3>边界说明</h3>
+    <ul>
+      <li>上链由手机端 imToken 完成，设备自身不联网</li>
+      <li>录音本地加密后再上链（AES-256-GCM）</li>
+      <li>重命名用弹窗输入；真实硬件无键盘，应改为滚轮选字</li>
+      <li>界面尺寸与按键布局按便携设备的约束设计</li>
+    </ul>
+  </div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="dialog">
+    <h4 id="dlg-title">重命名</h4>
+    <div id="dlg-msg" class="msg"></div>
+    <input id="dlg-input" maxlength="1000" autocomplete="off">
+    <div class="hint" id="dlg-hint">真实设备无键盘，此处为桌面调试便利而保留文本输入。</div>
+    <div class="acts">
+      <button id="dlg-cancel">取消</button>
+      <button class="primary" id="dlg-ok">确定</button>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+/* ---------------- 工具 ---------------- */
+const $ = (id) => document.getElementById(id);
+const api = async (path, opts) => {
+  const r = await fetch(path, opts);
+  const body = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(body.error || `HTTP ${r.status}`);
+  return body;
+};
+const fmtDur = (s) => {
+  s = Math.round(s || 0);
+  const m = Math.floor(s / 60);
+  return m ? `${m}分${String(s % 60).padStart(2, "0")}秒` : `${s}秒`;
+};
+const fmtBytes = (n) => n > 1048576 ? (n / 1048576).toFixed(1) + "M" : Math.round(n / 1024) + "K";
+
+/* ---------------- 状态 ---------------- */
+let view = { name: "main", rec: null, chain: null };   // 当前视图
+let stack = [];                                        // 导航栈
+let rows = [];                                         // 当前可选行
+let cursor = 0;                                        // 选中索引
+let settings = { denoise: true };
+let paired = false;
+let pairedFp = "";
+let pairedScheme = "";
+let pairedOwner = "";
+let recTimer = null;
+let audio = new Audio();
+let playing = null;                                    // 正在播放的记录 id
+
+/* ---------------- 渲染 ---------------- */
+function setStatus(left, right) {
+  $("status-left").textContent = left || "";
+  $("status-right").textContent = right || "";
+}
+
+/** 渲染一组行。每行: {label, sub, sel?, danger?, onSelect, detail?} */
+function renderRows(title, titleRight, list, emptyText) {
+  hideQrPanel();
+  $("title").textContent = title;
+  $("title-right").textContent = titleRight || "";
+  rows = list;
+  if (cursor >= rows.length) cursor = Math.max(0, rows.length - 1);
+  const el = $("list");
+  el.innerHTML = "";
+  if (!rows.length) {
+    const d = document.createElement("div");
+    d.className = "empty";
+    d.textContent = emptyText || "（空）";
+    el.appendChild(d);
+    return;
+  }
+  rows.forEach((r, i) => {
+    const d = document.createElement("div");
+    d.className = "row" + (i === cursor ? " sel" : "") + (r.danger ? " danger" : "");
+    const a = document.createElement("span");
+    a.textContent = r.label;
+    d.appendChild(a);
+    if (r.sub !== undefined) {
+      const s = document.createElement("span");
+      s.className = "sub";
+      s.textContent = r.sub;
+      d.appendChild(s);
+    }
+    // 桌面点击直接进入。硬件上没有"点击", 只有滚轮移动 + 中心键确认,
+    // 因此这里不改变按键语义, 只是省掉桌面用户的一次多余点击。
+    d.onclick = () => { cursor = i; if (r.onSelect) r.onSelect(); };
+    el.appendChild(d);
+  });
+  scrollToCursor();
+}
+
+function scrollToCursor() {
+  const sel = $("list").querySelector(".row.sel");
+  if (sel) sel.scrollIntoView({ block: "nearest" });
+}
+
+/** 渲染自由内容 (详情页)。动作列表同时支持"滚轮选中 + 中心键执行"(硬件语义)
+ *  与直接点击(桌面便利)。 */
+function renderPane(title, titleRight, html, actions) {
+  $("title").textContent = title;
+  $("title-right").textContent = titleRight || "";
+  rows = actions || [];
+  if (cursor >= rows.length) cursor = Math.max(0, rows.length - 1);
+  const el = $("list");
+  el.innerHTML = `<div class="pane">${html}</div>`;
+  if (!rows.length) return;
+  const acts = document.createElement("div");
+  acts.className = "acts";
+  rows.forEach((r, i) => {
+    const d = document.createElement("div");
+    d.className = "row action" + (i === cursor ? " sel" : "") + (r.danger ? " danger" : "");
+    d.textContent = r.label;
+    d.onclick = () => { cursor = i; if (r.onSelect) r.onSelect(); };
+    acts.appendChild(d);
+  });
+  el.appendChild(acts);
+  const sel = acts.querySelector(".row.sel");
+  if (sel) sel.scrollIntoView({ block: "nearest" });
+}
+
+/* ---------------- 菜单 ---------------- */
+const MAIN = [
+  { label: "🎙 录制", onSelect: () => toggleRecord() },
+  { label: "📁 录音文件", onSelect: () => openRecordings() },
+  { label: "⛓ 上链记录", onSelect: () => openChain() },
+  { label: "⚙ 设置", onSelect: () => openSettings() },
+];
+
+function goMain() {
+  view = { name: "main" };
+  stack = [];
+  cursor = 0;
+  renderRows("主菜单", "", MAIN);
+}
+
+async function openRecordings(keepCursor) {
+  view = { name: "recordings" };
+  const items = await api("/api/recordings");
+  const list = items.map((it) => ({
+    label: it.name,
+    sub: fmtDur(it.seconds) + (it.text ? " · 已转写" : "") + (it.sha256 ? " · 已签名" : ""),
+    onSelect: () => openDetail(it.id),
+  }));
+  if (!keepCursor) cursor = 0;
+  renderRows("录音文件", `${items.length} 条`, list, "还没有录音，回主菜单选“录制”");
+}
+
+async function openDetail(id) {
+  const items = await api("/api/recordings");
+  const it = items.find((x) => x.id === id);
+  if (!it) { goMain(); return; }
+  view = { name: "detail", rec: it };
+  cursor = 0;
+  drawDetail(it);
+}
+
+function drawDetail(it) {
+  const acts = [
+    { label: playing === it.id ? "暂停" : "播放", onSelect: () => playToggle(it.id) },
+    { label: it.text ? "重新转文字" : "转文字", onSelect: () => doTranscribe(it.id) },
+    { label: "重命名", onSelect: () => promptRename(it) },
+    { label: "生成签名载荷（仅登记，无二维码）", onSelect: () => doSign(it.id) },
+    { label: "生成上链二维码（扫后可签名上链）", onSelect: () => doOnchain(it.id) },
+    { label: "删除", danger: true, onSelect: () => doDelete(it.id) },
+  ];
+  if (it.chain_id) {
+    acts.splice(5, 0, { label: "查看上链记录", onSelect: () => openChain() });
+  }
+  const seg = (it.segments || []).map(
+    (s) => `[${s.t.toFixed(1)}s] ${s.text}`).join("\n");
+  const html = `
+    <h4>${escapeHtml(it.name)}</h4>
+    <div class="kv"><b>时长</b><span>${fmtDur(it.seconds)}</span></div>
+    <div class="kv"><b>大小</b><span>${fmtBytes(it.size)}</span></div>
+    <div class="kv"><b>时间</b><span>${escapeHtml(it.created_at || "")}</span></div>
+    ${it.sha256 ? `<div class="kv"><b>SHA256</b><span>${it.sha256.slice(0, 32)}…</span></div>` : ""}
+    ${it.asr_seconds ? `<div class="kv"><b>识别耗时</b><span>${it.asr_seconds}s</span></div>` : ""}
+    ${seg ? `<h4 style="margin-top:8px">转写内容</h4><div class="text">${escapeHtml(seg)}</div>` : ""}
+  `;
+  renderPane(it.name, "详情", html, acts);
+}
+
+function escapeHtml(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g,
+    (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+async function openChain() {
+  view = { name: "chain" };
+  const items = await api("/api/chain");
+  const list = items.map((e) => ({
+    label: e.name || e.rec_id,
+    sub: e.status === "pending" ? "待签名" : e.status,
+    onSelect: () => showChainEntry(e),
+  }));
+  cursor = 0;
+  renderRows("上链记录", `${items.length} 条`, list, "还没有签名记录");
+}
+
+function showChainEntry(e) {
+  view = { name: "chainDetail", entry: e };
+  cursor = 0;
+  const html = `
+    <h4>${escapeHtml(e.name || e.rec_id)}</h4>
+    <div class="kv"><b>状态</b><span>${e.status === "pending" ? "待签名（本地登记）" : e.status}</span></div>
+    <div class="kv"><b>时间</b><span>${escapeHtml(e.issued_at || "")}</span></div>
+    <div class="kv"><b>时长</b><span>${fmtDur(e.seconds)}</span></div>
+    <h4 style="margin-top:8px">内容摘要 SHA-256</h4>
+    <div class="text">${escapeHtml(e.sha256 || "")}</div>
+    <div class="hint" style="color:#6d7a68;margin-top:8px;font-size:10px;line-height:1.5">
+      该摘要对应录音文件的全部字节。链上写入需由钱包签名并广播交易，本模拟环境未接入链。
+    </div>
+  `;
+  renderPane(e.name || e.rec_id, "上链详情", html, [
+    { label: "回放该录音", onSelect: () => playToggle(e.rec_id) },
+    { label: "回到录音详情", onSelect: () => openDetail(e.rec_id) },
+  ]);
+}
+
+function openSettings() {
+  view = { name: "settings" };
+  cursor = 0;
+  const pairingStatus = !paired ? "未配对"
+    : pairedScheme === "wallet-signature-v1"
+      ? "钱包已配对 · " + shorten(pairedOwner)
+      : pairedScheme === "mnemonic-v1"
+        ? "旧版助记词配对 · 待迁移"
+        : "已配对 · " + pairedScheme;
+  const list = [
+    {
+      label: pairedScheme === "mnemonic-v1" ? "迁移到钱包签名配对"
+        : pairedScheme === "wallet-signature-v1" ? "更换配对钱包" : "钱包签名配对",
+      sub: pairingStatus,
+      onSelect: async () => {
+        try {
+          const res = await api("/api/pairing-link");
+          showQr(res, openSettings);
+        } catch (e) {
+          setStatus("生成配对码失败：" + e.message, "");
+          openSettings();
+        }
+      },
+    },
+    {
+      label: "导入配对凭据", sub: "模拟 BLE 回传",
+      onSelect: () => dialog({
+        title: "导入钱包配对凭据", mode: "input", value: "",
+        placeholder: "粘贴手机配对页生成的一次性凭据",
+        message: "模拟器用粘贴代替真机 BLE 回传；凭据包含 KEK，请勿发送给他人。",
+        onOk: async (credential) => {
+          if (!credential || !credential.trim()) { openSettings(); return; }
+          const replaceFingerprint = paired ? pairedFp : "";
+          const applyCredential = async () => {
+            try {
+              const r = await api("/api/pair-wallet", {
+                method: "POST", headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  credential: credential.trim(),
+                  replaceFingerprint,
+                }),
+              });
+              paired = true;
+              pairedFp = r.fingerprint || "";
+              pairedScheme = r.scheme || "";
+              pairedOwner = r.owner || "";
+              setStatus("钱包已配对 · " + shorten(pairedOwner), pairedFp);
+            } catch (e) {
+              setStatus("配对失败：" + e.message, "");
+            }
+            openSettings();
+          };
+          if (!paired) { await applyCredential(); return; }
+          dialog({
+            title: "确认更换配对钱包",
+            mode: "confirm",
+            message: "新凭据会覆盖当前配对密钥。旧录音不会自动迁移，之后仍需原钱包或旧恢复方式才能解密。",
+            onOk: async (ok) => {
+              if (ok === null) { openSettings(); return; }
+              await applyCredential();
+            },
+          });
+        },
+      }),
+    },
+    ...(paired ? [{
+      label: "清除配对",
+      sub: "保留记录 · 旧记录将无法在本机解密",
+      onSelect: () => dialog({
+        title: "清除配对",
+        mode: "confirm",
+        message: "仅清除设备保存的配对密钥，不删除录音或链上记录。清除后，本机无法解密依赖当前密钥的旧记录；请确认仍可使用原钱包或旧恢复方式找回。",
+        onOk: async (ok) => {
+          if (ok === null) return;
+          try {
+            await api("/api/pairing/clear", {
+              method: "POST", headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                confirm: "clear-pairing",
+                fingerprint: pairedFp,
+              }),
+            });
+            paired = false;
+            pairedFp = "";
+            pairedScheme = "";
+            pairedOwner = "";
+            setStatus("配对已清除", "录音仍保留；旧记录需原密钥恢复");
+            openSettings();
+          } catch (e) {
+            setStatus("清除失败：" + e.message, "");
+            openSettings();
+          }
+        },
+      }),
+    }] : []),
+    {
+      label: "恢复记录二维码", sub: pairedOwner ? shorten(pairedOwner) : "需先完成钱包配对",
+      onSelect: async () => {
+        try {
+          const res = await api("/api/recovery-link");
+          showQr(res, openSettings);
+        } catch (e) {
+          setStatus("生成恢复码失败：" + e.message, "");
+          openSettings();
+        }
+      },
+    },
+    {
+      label: "降噪", sub: settings.denoise ? "开" : "关",
+      onSelect: async () => {
+        settings = await api("/api/settings", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ denoise: !settings.denoise }),
+        });
+        refreshDenoiseNote();
+        openSettings();
+      },
+    },
+    {
+      label: "识别模型",
+      sub: ({ r2t2: "R2T2", "sense-voice": "SenseVoice", paraformer: "Paraformer" })[settings.model_type] || "R2T2",
+      onSelect: async () => {
+        const modelOrder = ["r2t2", "paraformer", "sense-voice"];
+        const nextModel = modelOrder[(modelOrder.indexOf(settings.model_type) + 1) % modelOrder.length];
+        settings = await api("/api/settings", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ model_type: nextModel }),
+        });
+        openSettings();
+      },
+    },
+    {
+      label: "端点静音阈值", sub: settings.trailing + "s",
+      onSelect: async () => {
+        const v = settings.trailing >= 1.5 ? 0.6 : +(settings.trailing + 0.3).toFixed(1);
+        settings = await api("/api/settings", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ trailing: v }),
+        });
+        openSettings();
+      },
+    },
+  ];
+  renderRows("设置", "", list);
+}
+
+function refreshDenoiseNote() {
+  $("dn-state").textContent = settings.denoise
+    ? "开（默认）" : "关";
+}
+
+/* ---------------- 动作 ---------------- */
+async function toggleRecord() {
+  try {
+    const st = await api("/api/state");
+    if (st.recorder.active) {
+      setStatus("保存中…", "");
+      const item = await api("/api/record/stop", { method: "POST" });
+      stopRecTimer();
+      $("b-center").classList.remove("rec");
+      setStatus("已保存", "");
+      await openRecordings();
+      return;
+    }
+    await api("/api/record/start", { method: "POST" });
+    $("b-center").classList.add("rec");
+    startRecTimer();
+    goMain();
+  } catch (e) {
+    setStatus("错误：" + e.message, "");
+  }
+}
+
+function startRecTimer() {
+  stopRecTimer();
+  const t0 = Date.now();
+  recTimer = setInterval(() => {
+    const s = Math.floor((Date.now() - t0) / 1000);
+    setStatus("● 录音中 " + fmtDur(s), fmtDur(s));
+  }, 250);
+}
+function stopRecTimer() { if (recTimer) clearInterval(recTimer); recTimer = null; }
+
+async function playToggle(id) {
+  if (playing === id && !audio.paused) {
+    audio.pause();
+    setStatus("已暂停", "");
+    playing = null;
+    if (view.rec) drawDetail(view.rec);
+    return;
+  }
+  const dn = settings.denoise ? "1" : "0";
+  audio.src = `/api/audio/${id}?denoise=${dn}`;
+  try {
+    await audio.play();
+    playing = id;
+    setStatus("播放中", settings.denoise ? "降噪" : "原声");
+  } catch (e) {
+    setStatus("播放失败", "");
+  }
+  if (view.rec && view.rec.id === id) drawDetail(view.rec);
+}
+audio.onended = () => {
+  playing = null;
+  setStatus("就绪", "");
+  if (view.rec) drawDetail(view.rec);
+};
+audio.ontimeupdate = () => {
+  if (playing) setStatus("播放中 " + fmtDur(audio.currentTime), settings.denoise ? "降噪" : "原声");
+};
+
+async function doTranscribe(id) {
+  const modelName = ({ r2t2: "R2T2", "sense-voice": "SenseVoice", paraformer: "Paraformer" })[settings.model_type] || settings.model_type;
+  renderPane("转文字", "处理中…",
+    `<div class="empty">正在本地识别…<br><span style="font-size:10px">降噪 ${settings.denoise ? "开" : "关"} · ${modelName}</span></div>`, []);
+  setStatus("识别中…", "");
+  try {
+    const it = await api(`/api/recording/${id}/transcribe`, { method: "POST" });
+    setStatus(`完成 ${it.asr_seconds}s`, "");
+    view.rec = it;
+    drawDetail(it);
+  } catch (e) {
+    setStatus("失败：" + e.message, "");
+    renderPane("转文字失败", "", `<div class="empty">${escapeHtml(e.message)}</div>`, []);
+  }
+}
+
+async function doOnchain(id) {
+  renderPane("上链", "生成中…", `<div class="empty">正在生成二维码…</div>`, []);
+  try {
+    const res = await api(`/api/recording/${id}/onchain`, { method: "POST" });
+    showQr(res, () => openDetail(id));
+  } catch (e) {
+    renderPane("上链失败", "", `<div class="empty">${escapeHtml(e.message)}</div>`, [
+      { label: "返回详情", onSelect: () => openDetail(id) },
+    ]);
+    setStatus("上链失败", "");
+  }
+}
+
+/** 二维码显示在设备屏幕内。提供三种码, 对应三种排查层级:
+ *    钱包配对码 — Universal Link，由手机系统或 imToken 唤起 DApp
+ *    直连码     — 页面地址，用于确认公网静态页本身是否存在
+ *    测试码  — 极简内容(25 模块), 验证"摄像头本身能否扫出这个屏幕"
+ *  必须能在三种之间切换, 否则无法定位问题出在哪一环。 */
+let qrBack = null;
+let qrData = null;
+let qrMode = 0;                      // 0 上链 / 1 直连 / 2 测试
+// 曾设想过 screen / nfc 两种形态。NFC 已撤回：imToken 官方文档的集成面只有
+// WebView / Universal Link / Deep Link / WalletConnect，没有 NFC；
+// 且 NFC 也省不掉"页面 + 公网域名"这个依赖（见技术方案 §3）。
+// 因此设备侧只有一种做法：显示二维码。
+
+const QR_MODES = [
+  { key: "qr", title: "钱包二维码", hint: "使用 imToken 或系统相机扫码 → 在钱包内打开并签名" },
+  { key: "qrDirect", title: "页面直连二维码", hint: "普通浏览器打开 → 检查静态页面是否部署完整" },
+  { key: "qrTest", title: "测试二维码", hint: "内容极短，模块最少 —— 用来确认摄像头能否扫出这个屏幕" },
+];
+
+function showQr(res, backFn) {
+  document.querySelector(".stage").classList.add("qr");
+  $("qrPanel").classList.add("on");
+  qrBack = backFn || goMain;
+  qrData = res;
+  qrMode = 0;
+  rows = [
+    { label: "切换二维码", onSelect: () => { qrMode = (qrMode + 1) % QR_MODES.length; renderQrPanel(); } },
+    { label: "返回详情", onSelect: () => exitQr() },
+  ];
+  cursor = 0;
+  renderQrPanel();
+}
+
+function renderQrPanel() {
+  const res = qrData;
+  const mode = QR_MODES[qrMode];
+  const q = res[mode.key] || {};
+  $("title").textContent = res.pairing ? "钱包配对二维码"
+    : res.recovery ? "恢复记录二维码" : mode.title;
+  $("title-right").textContent = `${qrMode + 1}/${QR_MODES.length}`;
+
+  const mods = q.modules || 0;
+  const border = q.border || 4;
+
+  // 诊断信息只在主码上展示(问题都出在真实链路上); 其余码给用途说明
+  const seen = new Set();
+  const diags = qrMode === 0 ? (res.diagnostics || []).filter((d) => {
+    const key = d.level + "|" + (d.fix || d.message);
+    if (seen.has(key)) return false;
+    seen.add(key); return true;
+  }).map((d) => `
+    <div class="qr-diag ${d.level}">
+      <b>${escapeHtml(d.message)}</b>
+      ${d.fix ? `<span class="fix">→ ${escapeHtml(d.fix)}</span>` : ""}
+    </div>`).join("") : `
+    <div class="qr-diag ok"><b>用途：${escapeHtml(mode.hint)}</b></div>`;
+
+  let host = "";
+  try { host = new URL(res.pageUrl).host; } catch (e) { host = res.pageUrl || ""; }
+
+  $("qrPanel").innerHTML = `
+    <div class="qr-notch"></div>
+    <div class="qr-head"><b>二维码</b>
+      <span style="color:#868d95;font-size:11px">· 由手机相机 / imToken 扫描</span><br>
+      <span style="color:#868d95;font-size:11px">${escapeHtml(mode.hint)}</span></div>
+    ${q.svg ? `<div class="qr-img">${q.svg}</div>`
+            : `<div class="qr-img" style="font-size:11px;color:#333">未安装二维码库</div>`}
+    <div class="qr-meta"></div>
+    ${diags}`;
+
+  // 每模块像素必须按"含静默区"的总模块数算: SVG 的 viewBox 覆盖 4 模块空白,
+  // 只按符号边长算会高估密度 —— 而密度正是本项目最紧的约束(实测 3px/模块扫不出)。
+  // 尺寸从实际渲染结果量取, 因为面板在窄窗口下会收缩。
+  const img = $("qrPanel").querySelector(".qr-img");
+  const inner = Math.max(0, (img ? img.clientWidth : 0) - 20);   // 减去内边距 10×2
+  const total = mods ? mods + border * 2 : 0;
+  const pxPerModule = total ? (inner / total).toFixed(2) : "?";
+  // 4.0px/模块 是实测的可靠线（93 模块 @3px 扫不出、73 模块 @4.7px 可扫）。
+  // 窗口偏窄时面板被压缩，这里会如实提示放大窗口，而不是假装没问题。
+  const tooDense = total > 0 && inner / total < 4.0;
+  // 同一屏上顺便算出"设备自带屏幕要多大"—— 这正是二维码不该画在设备上的原因
+  const devPx = Math.ceil(total * 4);          // 4px/模块 为可靠门槛
+  $("qrPanel").querySelector(".qr-meta").innerHTML =
+    (mods ? `${q.version} 版 · ${mods}×${mods} 模块 · 每模块 <b>${pxPerModule}px</b>${
+      tooDense ? ' <span class="dense">（偏密，建议放大窗口后再扫）</span>' : ""}<br>` : "") +
+    `目标 <b>${escapeHtml(host)}</b>`;
+
+  const tp = document.createElement("div");
+  tp.className = "qr-transport";
+  tp.innerHTML =
+    `此码含静默区 ${total} 模块，<b>至少需 ${devPx}px 宽</b>的屏才能直接显示。<br>` +
+    `单条 244px（1.5 吋 240×240 常见屏）即可 —— <b>一次显示一条</b>是关键。<br>` +
+    `扫码后由手机系统交给 <b>imToken</b> 打开页面并签名。` +
+    `<span class="warn">页面需托管在公网可信域名上（imToken 的硬性前提）。</span>`;
+  $("qrPanel").appendChild(tp);
+
+  // 设备屏幕只承载状态与操作, 尺寸恒定 —— 要扫的二维码在上面那个面板里
+  const el = $("list");
+  el.innerHTML = `
+    <div class="pane">
+      <h4>二维码已显示</h4>
+      <div class="kv"><b>载荷</b><span>${escapeHtml(mode.title)}</span></div>
+      <div class="kv"><b>目标</b><span>${escapeHtml(host)}</span></div>
+      <div class="kv"><b>屏幕</b><span>单条 244px 即可</span></div>
+      <div class="text">二维码见右侧面板（模拟设备屏幕）。
+一次显示一条。真实设备必须有
+显示能力 —— 这是唯一通路。</div>
+    </div>`;
+
+  const acts = document.createElement("div");
+  acts.className = "acts";
+  rows.forEach((r, i) => {
+    const d = document.createElement("div");
+    d.className = "row action" + (i === cursor ? " sel" : "");
+    d.textContent = r.label;
+    d.onclick = () => { cursor = i; r.onSelect(); };
+    acts.appendChild(d);
+  });
+  el.appendChild(acts);
+  el.scrollTop = 0;
+  setStatus(mode.title, mods ? `${mods}×${mods}` : "");
+}
+
+/** 收起二维码面板。任何普通界面渲染前都调用, 保证不会残留。 */
+function hideQrPanel() {
+  const p = $("qrPanel");
+  if (p) { p.classList.remove("on"); p.innerHTML = ""; }
+  document.querySelector(".stage").classList.remove("qr");
+}
+
+function exitQr() {
+  hideQrPanel();
+  qrData = null;
+  const f = qrBack;
+  qrBack = null;
+  if (f) f(); else goMain();
+}
+
+function shorten(h) {
+  h = String(h || "");
+  return h.length > 26 ? h.slice(0, 14) + "…" + h.slice(-8) : h;
+}
+
+async function doSign(id) {
+  renderPane("签名", "计算中…", `<div class="empty">正在计算内容摘要…</div>`, []);
+  try {
+    const e = await api(`/api/recording/${id}/sign`, { method: "POST" });
+    setStatus("已生成载荷", "待签名");
+    const html = `
+      <h4>待签载荷已生成</h4>
+      <div class="kv"><b>名称</b><span>${escapeHtml(e.name)}</span></div>
+      <div class="kv"><b>状态</b><span>待签名</span></div>
+      <h4 style="margin-top:8px">SHA-256</h4>
+      <div class="text">${escapeHtml(e.sha256)}</div>
+      <div class="hint" style="color:#6d7a68;margin-top:8px;font-size:10px;line-height:1.5">
+        真实流程中，该摘要会编码进二维码供钱包扫描签名后上链；此处仅做本地登记。
+      </div>
+    `;
+    renderPane("签名", "待签名", html, [
+      { label: "查看上链记录", onSelect: () => openChain() },
+      { label: "返回详情", onSelect: () => openDetail(id) },
+    ]);
+  } catch (e) {
+    setStatus("失败：" + e.message, "");
+    renderPane("签名失败", "", `<div class="empty">${escapeHtml(e.message)}</div>`, []);
+  }
+}
+
+/** 通用弹层。mode: "input" 显示输入框, "confirm" 只显示提示。 */
+function dialog({ title, message, value, placeholder, mode, onOk }) {
+  const ov = $("overlay");
+  $("dlg-title").textContent = title;
+  $("dlg-msg").textContent = message || "";
+  const input = $("dlg-input");
+  input.style.display = mode === "input" ? "" : "none";
+  input.value = value || "";
+  input.placeholder = placeholder || "";
+  $("dlg-hint").style.display = mode === "input" ? "" : "none";
+  ov.classList.add("on");
+  if (mode === "input") setTimeout(() => input.focus(), 30);
+
+  const close = () => {
+    ov.classList.remove("on");
+    $("dlg-ok").onclick = $("dlg-cancel").onclick = input.onkeydown = null;
+  };
+  const ok = () => { const v = input.value; close(); onOk(v); };
+  const cancel = () => { close(); onOk(null); };
+
+  $("dlg-ok").onclick = ok;
+  $("dlg-cancel").onclick = cancel;
+  input.onkeydown = (ev) => {
+    // 必须拦截冒泡: 否则 close() 之后事件继续传到 window 的全局快捷键处理器,
+    // Enter 会被再当成一次"中心键", 把刚执行过的动作又触发一遍。
+    ev.stopPropagation();
+    if (ev.key === "Enter") ok();
+    if (ev.key === "Escape") cancel();
+  };
+}
+
+function promptRename(it) {
+  dialog({
+    title: "重命名", mode: "input", value: it.name,
+    onOk: async (name) => {
+      if (name === null || !name.trim()) return;
+      try {
+        const updated = await api(`/api/recording/${it.id}/rename`, {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name: name.trim() }),
+        });
+        view.rec = updated;
+        drawDetail(updated);
+        setStatus("已重命名", "");
+      } catch (e) { setStatus("失败：" + e.message, ""); }
+    },
+  });
+}
+
+function doDelete(id) {
+  dialog({
+    title: "删除录音",
+    mode: "confirm",
+    message: "删除后无法恢复，音频文件与记录都会移除。",
+    onOk: async (ok) => {
+      if (ok === null) return;
+      try {
+        await api(`/api/recording/${id}/delete`, { method: "POST" });
+        setStatus("已删除", "");
+        await openRecordings();
+      } catch (e) { setStatus("失败：" + e.message, ""); }
+    },
+  });
+}
+
+/* ---------------- 滚轮 / 按键 ---------------- */
+function move(delta) {
+  if (!rows.length) return;
+  cursor = (cursor + delta + rows.length) % rows.length;
+  // 二维码模式下必须重绘面板: 否则会落到下面的 renderRows, 把二维码直接冲掉。
+  if ($("qrPanel").classList.contains("on")) { renderQrPanel(); return; }
+  const title = $("title").textContent;
+  const tr = $("title-right").textContent;
+  if (view.name === "detail" && view.rec) drawDetail(view.rec);
+  else if (view.name === "settings") openSettings();
+  else renderRows(title, tr, rows);
+}
+
+function press() {
+  const r = rows[cursor];
+  if (r && r.onSelect) r.onSelect();
+}
+
+$("b-center").onclick = press;
+$("b-menu").onclick = () => {
+  if ($("qrPanel").classList.contains("on")) { exitQr(); return; }
+  if (view.name === "main") { goMain(); return; }
+  if (view.name === "detail" || view.name === "settings") { goMain(); return; }
+  if (view.name === "chainDetail") { openChain(); return; }
+  goMain();
+};
+$("b-play").onclick = () => {
+  if (view.rec) playToggle(view.rec.id);
+  else if (playing) playToggle(playing);
+  else setStatus("没有选中的录音", "");
+};
+$("b-prev").onclick = () => { if (playing) audio.currentTime = Math.max(0, audio.currentTime - 5); };
+$("b-next").onclick = () => { if (playing) audio.currentTime = Math.min(audio.duration || 1e9, audio.currentTime + 5); };
+
+/* 滚轮拖拽: 以指针相对圆心的角度变化驱动, 与真实点击轮手感一致 */
+(function attachWheel() {
+  const el = $("wheel");
+  let dragging = false, lastAngle = 0, accum = 0;
+
+  const angleAt = (ev) => {
+    const r = el.getBoundingClientRect();
+    const dx = ev.clientX - (r.left + r.width / 2);
+    const dy = ev.clientY - (r.top + r.height / 2);
+    return Math.atan2(dy, dx) * 180 / Math.PI;
+  };
+
+  el.addEventListener("mousedown", (ev) => {
+    if (ev.target.closest("button")) return;   // 点到按钮则不当作拖拽
+    dragging = true; accum = 0; lastAngle = angleAt(ev);
+    ev.preventDefault();
+  });
+  window.addEventListener("mousemove", (ev) => {
+    if (!dragging) return;
+    const a = angleAt(ev);
+    let d = a - lastAngle;
+    if (d > 180) d -= 360;
+    if (d < -180) d += 360;
+    accum += d;
+    lastAngle = a;
+    const step = 22;
+    while (Math.abs(accum) >= step) {
+      move(accum > 0 ? 1 : -1);
+      accum -= Math.sign(accum) * step;
+    }
+  });
+  window.addEventListener("mouseup", () => { dragging = false; });
+
+  // 桌面鼠标滚轮同样可用
+  el.addEventListener("wheel", (ev) => {
+    ev.preventDefault();
+    move(ev.deltaY > 0 ? 1 : -1);
+  }, { passive: false });
+})();
+
+/* 键盘快捷键 (调试便利; 硬件上只有上述按键) */
+window.addEventListener("keydown", (ev) => {
+  if ($("overlay").classList.contains("on")) return;
+  if (ev.target && ev.target.tagName === "INPUT") return;   // 防漏网的表单输入
+  if (ev.key === "ArrowUp") { move(-1); ev.preventDefault(); }
+  if (ev.key === "ArrowDown") { move(1); ev.preventDefault(); }
+  if (ev.key === "Enter") { press(); ev.preventDefault(); }
+  if (ev.key === "Escape" || ev.key === "Backspace") { $("b-menu").onclick(); ev.preventDefault(); }
+  if (ev.key === " ") { $("b-play").onclick(); ev.preventDefault(); }
+});
+
+/* ---------------- 启动 ---------------- */
+(async function boot() {
+  try {
+    const st = await api("/api/state");
+    settings = st.settings;
+    // 配对状态以服务端为准（持久化在设备侧，刷新页面不丢失）
+    if (st.pairing && st.pairing.paired) {
+      paired = true;
+      pairedFp = st.pairing.fingerprint || "";
+      pairedScheme = st.pairing.scheme || "";
+      pairedOwner = st.pairing.owner || "";
+    }
+    refreshDenoiseNote();
+    if (st.recorder.active) { $("b-center").classList.add("rec"); startRecTimer(); }
+    if (!st.models.denoiser) {
+      $("note-denoise").innerHTML = '降噪 — <span style="color:#e0a458">模型缺失</span>';
+    }
+  } catch (e) {
+    setStatus("无法连接服务", "");
+  }
+  goMain();
+  setInterval(async () => {                  // 录音时长与状态的轻量轮询
+    if (view.name !== "main") return;
+    try {
+      const st = await api("/api/state");
+      if (!st.recorder.active && recTimer) {
+        stopRecTimer(); $("b-center").classList.remove("rec"); setStatus("就绪", "");
+      }
+    } catch (_) { /* 忽略瞬时失败 */ }
+  }, 2000);
+})();
+</script>
+</body>
+</html>

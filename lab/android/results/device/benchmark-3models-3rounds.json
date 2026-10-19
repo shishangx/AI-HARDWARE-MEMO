@@ -1,0 +1,495 @@
+{
+  "run_id": "benchmark-3models-3rounds",
+  "kind": "benchmark",
+  "environment": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 5177974784,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  },
+  "status": "complete",
+  "entries": [
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 2170.5449999999255,
+      "inference_ms": 94.063615,
+      "cpu_ms": 367,
+      "rtf": 0.013956025964391692,
+      "vad": false,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 239016,
+        "native_heap_bytes": 147581408,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "343580 kB",
+        "VmRSS_process": "333800 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 5030465536,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:09.226+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 0,
+      "inference_ms": 131.551616,
+      "cpu_ms": 600,
+      "rtf": 0.019518043916913943,
+      "vad": false,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 243902,
+        "native_heap_bytes": 152317696,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "343580 kB",
+        "VmRSS_process": "339368 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 5029486592,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 2,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:09.391+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 0,
+      "inference_ms": 89.152385,
+      "cpu_ms": 327,
+      "rtf": 0.013227356824925816,
+      "vad": false,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 245402,
+        "native_heap_bytes": 152405856,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "343580 kB",
+        "VmRSS_process": "341380 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 5029695488,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 3,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:09.511+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "sensevoice",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 2135.005615999922,
+      "inference_ms": 246.873462,
+      "cpu_ms": 943,
+      "rtf": 0.03662811008902077,
+      "vad": false,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 440776,
+        "native_heap_bytes": 328820064,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "537572 kB",
+        "VmRSS_process": "536980 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4832485376,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:12.000+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "sensevoice",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 0,
+      "inference_ms": 248.922769,
+      "cpu_ms": 973,
+      "rtf": 0.036932161572700295,
+      "vad": false,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 439043,
+        "native_heap_bytes": 328642320,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "539536 kB",
+        "VmRSS_process": "535988 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4832841728,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 2,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:12.282+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "sensevoice",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 0,
+      "inference_ms": 247.963384,
+      "cpu_ms": 966,
+      "rtf": 0.03678981958456973,
+      "vad": false,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 417759,
+        "native_heap_bytes": 328721424,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "539536 kB",
+        "VmRSS_process": "514652 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4848779264,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 3,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:12.565+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 2343.191308000125,
+      "inference_ms": 4628.916539,
+      "cpu_ms": 18196,
+      "rtf": 0.6867828692878337,
+      "vad": false,
+      "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3054853,
+        "native_heap_bytes": 2452720160,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "3158712 kB",
+        "VmRSS_process": "3157172 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3355402240,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:19.682+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 0,
+      "inference_ms": 4552.896539,
+      "cpu_ms": 17893,
+      "rtf": 0.675503937537092,
+      "vad": false,
+      "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3050717,
+        "native_heap_bytes": 2452644304,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "3158712 kB",
+        "VmRSS_process": "3153268 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3348926464,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 2,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:24.302+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 0,
+      "inference_ms": 4550.301462,
+      "cpu_ms": 17870,
+      "rtf": 0.6751189112759644,
+      "vad": false,
+      "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3052169,
+        "native_heap_bytes": 2452722720,
+        "thermal_status": 0,
+        "battery_temp_c": 30,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "3158712 kB",
+        "VmRSS_process": "3154628 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3343159296,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 3,
+      "run_id": "benchmark-3models-3rounds",
+      "recorded_at": "2026-10-15T20:14:28.919+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    }
+  ],
+  "failures": 0,
+  "environment_after": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 3343159296,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  }
+}

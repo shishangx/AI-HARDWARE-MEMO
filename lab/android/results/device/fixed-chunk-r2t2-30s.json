@@ -1,0 +1,76 @@
+{
+  "run_id": "fixed-chunk-r2t2-30s",
+  "kind": "benchmark",
+  "environment": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 4988207104,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  },
+  "status": "complete",
+  "entries": [
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "duration-30s.wav",
+      "audio_sha256": "1882f37ab7cb1bd53cbb30fbd955f828510e679492b89bc4f6e839f70b59b3f4",
+      "audio_seconds": 30,
+      "load_ms": 2542.901538999751,
+      "inference_ms": 20512.163925,
+      "cpu_ms": 80715,
+      "rtf": 0.6837387975,
+      "vad": false,
+      "segmentation": "fixed_15s",
+      "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。之前有顾客自己带酒水，也没加收钱或者不让喝。之前|\n顾客自己带酒水也没加收钱或者不让喝，之前有顾客自己带酒水也没加收钱或者不让喝，之前有顾客自己带酒水。",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 15,
+          "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。之前有顾客自己带酒水，也没加收钱或者不让喝。之前|"
+        },
+        {
+          "start_s": 15,
+          "duration_s": 15,
+          "text": "顾客自己带酒水也没加收钱或者不让喝，之前有顾客自己带酒水也没加收钱或者不让喝，之前有顾客自己带酒水。"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3039529,
+        "native_heap_bytes": 2463644736,
+        "thermal_status": 0,
+        "battery_temp_c": 32,
+        "battery_level": 100
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3080876032,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "fixed-chunk-r2t2-30s",
+      "recorded_at": "2026-10-15T23:04:24.336+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    }
+  ],
+  "failures": 0
+}

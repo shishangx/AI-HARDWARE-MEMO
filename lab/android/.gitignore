@@ -1,0 +1,8 @@
+build/
+vendor/
+models/
+results/*.png
+results/*.xml
+*.keystore
+.env
+

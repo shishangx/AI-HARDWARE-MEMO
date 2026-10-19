@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>记忆上链 · 待签名批次</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>记忆上链</h1>
+<div class="sub" id="page-subtitle">待签名批次 · 内容摘要已随载荷提供</div>
+
+<div id="boot" class="status">正在解析载荷…</div>
+
+<div id="main" style="display:none">
+  <div class="card" id="card-batch">
+    <h2>批次概览</h2>
+    <div class="kv"><b>记录数</b><span id="n-records">-</span></div>
+    <div class="kv"><b>目标链</b><span id="chain">-</span></div>
+    <div class="kv"><b>合约</b><span id="contract" class="mono">-</span></div>
+    <div class="kv"><b>钱包</b><span id="account">未连接</span></div>
+    <div id="records"></div>
+  </div>
+
+  <div class="card">
+    <h2>运行环境</h2>
+    <div id="env" class="env"></div>
+    <div class="note">
+      手机端没有控制台，因此这里直接显示连接所依赖的环境条件。
+      若"钱包 provider"显示未检测到，说明本页不是在 imToken 内打开，
+      或因为不是 https 而未被注入钱包。
+    </div>
+  </div>
+
+  <div class="card" id="card-submit">
+    <h2>提交</h2>
+    <button id="btn-connect">连接钱包</button>
+    <button id="btn-send" class="primary" disabled>签名并上链</button>
+    <div id="send-status" class="status" style="display:none"></div>
+    <div class="note">
+      提交后由钱包确认并广播。密文随 calldata 上链；缺少密文的载荷会在签名前被拒绝。
+    </div>
+  </div>
+
+  <div class="card" id="card-pair" style="display:none">
+    <h2>钱包签名配对</h2>
+    <div class="note" style="margin-top:0">
+      钱包将对同一份 EIP-712 恢复声明签名两次。第一次用于派生密钥，第二次只做一致性检查：
+      如果同一钱包不能稳定重建相同签名，日后将无法恢复密文，因此配对必须立即停止。
+      签名不会广播或上链，也不需要输入钱包助记词。
+    </div>
+    <button id="btn-pair-connect">连接钱包</button>
+    <button id="btn-pair" class="primary" disabled>签名两次并生成配对凭据</button>
+    <div id="pair-status" class="status" style="display:none"></div>
+    <div id="pair-result" style="display:none">
+      <label>用 Private Memo 硬件扫描签名数据二维码</label>
+      <div id="pair-qr"></div>
+      <div class="note">二维码包含恢复密钥材料。仅在硬件就在身边时显示并扫描，不要截图、转发或上传。</div>
+      <details id="pair-fallback">
+        <summary>扫码不可用时显示明文凭据（实验回退）</summary>
+        <div class="note">凭据等同于恢复密钥。仅在隔离环境中复制，不要截图、转发或上传。</div>
+        <label for="pair-credential">一次性配对凭据</label>
+        <textarea id="pair-credential" rows="4" readonly></textarea>
+        <button id="btn-copy-pair">复制配对凭据</button>
+      </details>
+    </div>
+  </div>
+
+  <div class="card" id="card-recover">
+    <h2>换机恢复</h2>
+    <div class="note" id="recover-note" style="margin-top:0">
+      只需要<b>助记词</b>：它在本页<b>本地</b>推导密钥，<b>不会发送到任何地方</b>
+      —— 不写进 URL、不发给 RPC、不发给托管方。记录按钱包地址从链上枚举，
+      逐条核对内容摘要后才解密。
+    </div>
+    <div id="mnemonic-wrap">
+      <label for="mnemonic">旧版设备恢复词（12/24 词，仅用于历史记录）</label>
+      <textarea id="mnemonic" rows="3" autocomplete="off" autocapitalize="off"
+        spellcheck="false" placeholder="留空则只枚举与校验，不解密"></textarea>
+    </div>
+    <label for="owner">要恢复的地址</label>
+    <input id="owner" placeholder="留空则用钱包连接的地址" autocomplete="off"
+      spellcheck="false">
+    <label for="rpc">回退 RPC（可选）</label>
+    <input id="rpc" placeholder="留空则只用钱包读取" autocomplete="off" spellcheck="false">
+    <button id="btn-recover-connect" style="display:none">连接配对钱包</button>
+    <button id="btn-fetch" class="primary">恢复记录</button>
+    <div id="fetch-status" class="status" style="display:none"></div>
+    <div id="recovered"></div>
+    <details id="raw-wrap" style="display:none">
+      <summary>链上原始事件（排查用）</summary>
+      <pre id="fetch-out"></pre>
+    </details>
+  </div>
+</div>
+
+<div id="fatal" class="status err" style="display:none"></div>
+
+<script src="abi.js"></script>
+<script src="crypto.js"></script>
+<script src="wallet_pairing.js"></script>
+<script src="qrcode.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

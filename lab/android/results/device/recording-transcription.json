@@ -1,0 +1,49 @@
+{
+  "kind": "asr",
+  "model": "paraformer",
+  "backend": "cpu",
+  "threads": 4,
+  "sample": "record-1792066627925.wav",
+  "audio_sha256": "7e5dcc0ace1f81cdbb21b219dceb7ddc6979a98908ae9f0981992db606ef380b",
+  "audio_seconds": 4.6,
+  "load_ms": 2040.1624619998038,
+  "inference_ms": 107.589154,
+  "cpu_ms": 237,
+  "rtf": 0.023388946521739132,
+  "vad": true,
+  "text": "这给我看哪来了",
+  "segments": [
+    {
+      "start_s": 1.232,
+      "duration_s": 3.344,
+      "text": "这给我看哪来了"
+    }
+  ],
+  "memory_after": {
+    "pss_kb": 241667,
+    "native_heap_bytes": 147672816,
+    "thermal_status": 0,
+    "battery_temp_c": 31,
+    "battery_level": 98,
+    "plugged": 2,
+    "VmHWM_process": "342360 kB",
+    "VmRSS_process": "334476 kB"
+  },
+  "environment": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 4954767360,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  },
+  "recorded_at": "2026-10-15T20:18:42.020+08:00",
+  "device": "Seeker",
+  "android_api": 35
+}

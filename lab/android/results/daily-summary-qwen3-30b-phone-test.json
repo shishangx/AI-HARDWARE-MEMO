@@ -1,0 +1,55 @@
+{
+  "kind": "daily_summary",
+  "date": "2026-10-16",
+  "created_at": "2026-10-16T15:32:02+08:00",
+  "model": "Qwen3-30B",
+  "backend": "lan_llm",
+  "transcript_count": 7,
+  "source_hash": "6d63bcdf4268ce76f8587f6d9090a9117cba6a08966c50c709eb59227d01c90a",
+  "load_ms": 0,
+  "content": "【今日概览】  \n今日多次询问当前使用的模型名称，提及“微色”和“Wesper模型”。记录中包含测试语音及空白音频片段。  \n【关键事项】  \n- 多次询问当前使用的模型，疑似混淆“微色”与“Wesper模型”。  \n- 有语音提及“这是用Wesper模型于生长的路音记录”，但语义不清，无法确认其准确含义。  \n- 存在测试语音（“hello hello 测试测试”）及空白音频片段。  \n【待办与提醒】  \n暂无明确待办  \n【线索与风险】  \n- “微色”是否为“Wesper模型”的误称或别名尚不明确。  \n- “于生长的路音记录”语义模糊，无法确认其指代内容。  \n- 多次重复询问同一问题，可能反映模型识别或切换存在异常。",
+  "sources": [
+    {
+      "transcript_id": "tx-1792124683406-recording_2026-10-16_12-14-16.wav",
+      "audio_file": "recording_2026-10-16_12-14-16.wav",
+      "time": "12:24",
+      "excerpt": "现在我使用的是什么模型\n这是用微色还是用微色模型吗"
+    },
+    {
+      "transcript_id": "tx-1792124643479-recording_2026-10-16_12-22-09.wav",
+      "audio_file": "recording_2026-10-16_12-22-09.wav",
+      "time": "12:24",
+      "excerpt": "just"
+    },
+    {
+      "transcript_id": "tx-1792124539831-recording_2026-10-16_12-22-09.wav",
+      "audio_file": "recording_2026-10-16_12-22-09.wav",
+      "time": "12:22",
+      "excerpt": "[BLANK_AUDIO]"
+    },
+    {
+      "transcript_id": "tx-1792124487755-recording_2026-10-16_12-14-16.wav",
+      "audio_file": "recording_2026-10-16_12-14-16.wav",
+      "time": "12:21",
+      "excerpt": "现在我使用的是什么模型\n这是用微色还是用微色模型吗"
+    },
+    {
+      "transcript_id": "tx-1792124072876-recording_2026-10-16_12-14-16.wav",
+      "audio_file": "recording_2026-10-16_12-14-16.wav",
+      "time": "12:14",
+      "excerpt": "现在我使用的是什么模型\n这是用微色还是用微色模型吗"
+    },
+    {
+      "transcript_id": "tx-1792124028724-recording_2026-10-16_12-13-37.wav",
+      "audio_file": "recording_2026-10-16_12-13-37.wav",
+      "time": "12:13",
+      "excerpt": "这是用Wesper模型于生长的路音记录"
+    },
+    {
+      "transcript_id": "tx-1792118948541-recording_2026-10-16_10-49-00.wav",
+      "audio_file": "recording_2026-10-16_10-49-00.wav",
+      "time": "10:49",
+      "excerpt": "hello hello 测试测试"
+    }
+  ]
+}

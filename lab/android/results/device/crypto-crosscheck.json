@@ -1,0 +1,10 @@
+{
+  "kind": "android_python_crypto_crosscheck",
+  "source": "AI-HARDWARE/lab/android/results/device/crypto-self-test.json",
+  "decrypt_matches": true,
+  "encrypt_blob_matches": true,
+  "content_hash_matches": true,
+  "timestamp_tamper_rejected": true,
+  "android_tamper_rejected": true,
+  "android_qr_roundtrip": true
+}

@@ -1,0 +1,36 @@
+.DS_Store
+**/.DS_Store
+**/__pycache__/
+*.pyc
+**/.~*
+
+# Local configuration and credentials
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*.keystore
+
+# Build and runtime outputs
+lab/android/build/
+lab/android/vendor/
+lab/android/models/
+lab/r2t2/build/
+lab/r2t2/env/
+lab/r2t2/models/
+lab/r2t2/source/
+web3/out/
+web3/cache/
+web3/.state/
+web3/.lan-tls/
+web3/.recover-run/
+web3/bin/
+
+# Generated device screenshots and test reports
+lab/android/results/*.png
+lab/android/results/*.xml
+lab/android/results/device/latest-qr.png
+lab/android/results/device/recordings/
+lab/.pairing
+lab/recordings/

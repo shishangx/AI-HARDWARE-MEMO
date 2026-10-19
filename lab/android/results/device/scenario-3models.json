@@ -1,0 +1,648 @@
+{
+  "run_id": "scenario-3models",
+  "kind": "benchmark",
+  "environment": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 5186179072,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  },
+  "status": "complete",
+  "entries": [
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-0.wav",
+      "audio_sha256": "668bf8df51a10027b84d5d8816a1ce11ae93545538dc05cfe2aa6811d399c250",
+      "audio_seconds": 5.6115,
+      "load_ms": 2043.7833850001916,
+      "inference_ms": 85.235692,
+      "cpu_ms": 306,
+      "rtf": 0.015189466631025572,
+      "vad": false,
+      "text": "对我做了介绍啊那么我想说的是呢大家如果对我的研究感兴趣呢嗯",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 5.6115,
+          "text": "对我做了介绍啊那么我想说的是呢大家如果对我的研究感兴趣呢嗯"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 240885,
+        "native_heap_bytes": 147590128,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "342484 kB",
+        "VmRSS_process": "334224 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 5016420352,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:03.716+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-2-zh-en.wav",
+      "audio_sha256": "eddf384a906bd6d905c9d9d652d614def1857608b88c2eee663ceeccbb31f7a3",
+      "audio_seconds": 8.1,
+      "load_ms": 0,
+      "inference_ms": 147.951385,
+      "cpu_ms": 657,
+      "rtf": 0.01826560308641975,
+      "vad": false,
+      "text": "yesterday was 星期一 today is tuesday 明天是星期三",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 8.1,
+          "text": "yesterday was 星期一 today is tuesday 明天是星期三"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 247605,
+        "native_heap_bytes": 148117760,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "342956 kB",
+        "VmRSS_process": "342648 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 5013827584,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:03.901+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-3-sichuan.wav",
+      "audio_sha256": "150b75ada9f5b4011018e961e56427e4af6849fcc69764321556586bc4790c49",
+      "audio_seconds": 7.835,
+      "load_ms": 0,
+      "inference_ms": 113.230154,
+      "cpu_ms": 412,
+      "rtf": 0.014451838417358009,
+      "vad": false,
+      "text": "自己就是在那个在那个就是在情节里面就是感觉是演的特别好就是好像很真实一样你知道吧",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 7.835,
+          "text": "自己就是在那个在那个就是在情节里面就是感觉是演的特别好就是好像很真实一样你知道吧"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 252469,
+        "native_heap_bytes": 152646240,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "346964 kB",
+        "VmRSS_process": "346964 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 5009932288,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:04.049+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-8k.wav",
+      "audio_sha256": "0ed3bddacf0a23477d2b3c07ff9c24ad9c1fc3b31cdd47cb0773441e8e045cde",
+      "audio_seconds": 4.524375,
+      "load_ms": 0,
+      "inference_ms": 69.702538,
+      "cpu_ms": 274,
+      "rtf": 0.015406003702168809,
+      "vad": false,
+      "text": "深入的分析这一次全球金融动荡背后的根源",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 4.524375,
+          "text": "深入的分析这一次全球金融动荡背后的根源"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 254889,
+        "native_heap_bytes": 152827616,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "349556 kB",
+        "VmRSS_process": "349556 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 5008175104,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:04.152+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "sensevoice",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-0.wav",
+      "audio_sha256": "668bf8df51a10027b84d5d8816a1ce11ae93545538dc05cfe2aa6811d399c250",
+      "audio_seconds": 5.6115,
+      "load_ms": 1960.5493080001324,
+      "inference_ms": 213.364923,
+      "cpu_ms": 820,
+      "rtf": 0.038022796578454955,
+      "vad": false,
+      "text": "对我做了介绍啊那么我想说的是呢大家如果对我的研究感兴趣呢",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 5.6115,
+          "text": "对我做了介绍啊那么我想说的是呢大家如果对我的研究感兴趣呢"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 427231,
+        "native_heap_bytes": 328990208,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "532108 kB",
+        "VmRSS_process": "522056 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4836847616,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:06.423+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "sensevoice",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-2-zh-en.wav",
+      "audio_sha256": "eddf384a906bd6d905c9d9d652d614def1857608b88c2eee663ceeccbb31f7a3",
+      "audio_seconds": 8.1,
+      "load_ms": 0,
+      "inference_ms": 306.470769,
+      "cpu_ms": 1197,
+      "rtf": 0.037835897407407414,
+      "vad": false,
+      "text": "ESTERDAY WAS 星期一 TODAY IS TUESDAY 明天是星期三",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 8.1,
+          "text": "ESTERDAY WAS 星期一 TODAY IS TUESDAY 明天是星期三"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 428487,
+        "native_heap_bytes": 328859488,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "532108 kB",
+        "VmRSS_process": "523732 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4831985664,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:06.767+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "sensevoice",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-3-sichuan.wav",
+      "audio_sha256": "150b75ada9f5b4011018e961e56427e4af6849fcc69764321556586bc4790c49",
+      "audio_seconds": 7.835,
+      "load_ms": 0,
+      "inference_ms": 294.174769,
+      "cpu_ms": 1141,
+      "rtf": 0.037546237268666245,
+      "vad": false,
+      "text": "自己就是在那个在那个就是在情节里面就是感觉是演得特别好就是好像很真实一样你知道吧",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 7.835,
+          "text": "自己就是在那个在那个就是在情节里面就是感觉是演得特别好就是好像很真实一样你知道吧"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 431699,
+        "native_heap_bytes": 329053952,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "532108 kB",
+        "VmRSS_process": "527060 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4828635136,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:07.115+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "sensevoice",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-8k.wav",
+      "audio_sha256": "0ed3bddacf0a23477d2b3c07ff9c24ad9c1fc3b31cdd47cb0773441e8e045cde",
+      "audio_seconds": 4.524375,
+      "load_ms": 0,
+      "inference_ms": 176.291923,
+      "cpu_ms": 673,
+      "rtf": 0.038964922889901915,
+      "vad": false,
+      "text": "深入的分析这一次全球金融动荡背后的根源",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 4.524375,
+          "text": "深入的分析这一次全球金融动荡背后的根源"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 426735,
+        "native_heap_bytes": 329239968,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "532108 kB",
+        "VmRSS_process": "522020 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4827344896,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:07.326+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-0.wav",
+      "audio_sha256": "668bf8df51a10027b84d5d8816a1ce11ae93545538dc05cfe2aa6811d399c250",
+      "audio_seconds": 5.6115,
+      "load_ms": 2349.082769000437,
+      "inference_ms": 4374.431616,
+      "cpu_ms": 17147,
+      "rtf": 0.7795476460839347,
+      "vad": false,
+      "text": "对我做了介绍啊，那么我想说的是呢，大家如果对我的研究感兴趣呢，",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 5.6115,
+          "text": "对我做了介绍啊，那么我想说的是呢，大家如果对我的研究感兴趣呢，"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3033378,
+        "native_heap_bytes": 2432365520,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "3129480 kB",
+        "VmRSS_process": "3128164 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3250470912,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:14.200+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-2-zh-en.wav",
+      "audio_sha256": "eddf384a906bd6d905c9d9d652d614def1857608b88c2eee663ceeccbb31f7a3",
+      "audio_seconds": 8.1,
+      "load_ms": 0,
+      "inference_ms": 5476.181308,
+      "cpu_ms": 21543,
+      "rtf": 0.6760717664197531,
+      "vad": false,
+      "text": "Yesterday was星期一，Today is Tuesday，明天是星期三。",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 8.1,
+          "text": "Yesterday was星期一，Today is Tuesday，明天是星期三。"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3067902,
+        "native_heap_bytes": 2471872544,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "3164068 kB",
+        "VmRSS_process": "3163144 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3200036864,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:19.748+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-3-sichuan.wav",
+      "audio_sha256": "150b75ada9f5b4011018e961e56427e4af6849fcc69764321556586bc4790c49",
+      "audio_seconds": 7.835,
+      "load_ms": 0,
+      "inference_ms": 5739.456692,
+      "cpu_ms": 22543,
+      "rtf": 0.7325407392469687,
+      "vad": false,
+      "text": "自己就是在那个在那个就是在情节里面，就是感觉是演得特别好，就是好像很真实一样，你知道吧？",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 7.835,
+          "text": "自己就是在那个在那个就是在情节里面，就是感觉是演得特别好，就是好像很真实一样，你知道吧？"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3068086,
+        "native_heap_bytes": 2471962960,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "3167128 kB",
+        "VmRSS_process": "3163248 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3201499136,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:25.553+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "r2t2",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "para-8k.wav",
+      "audio_sha256": "0ed3bddacf0a23477d2b3c07ff9c24ad9c1fc3b31cdd47cb0773441e8e045cde",
+      "audio_seconds": 4.524375,
+      "load_ms": 0,
+      "inference_ms": 3325.919154,
+      "cpu_ms": 13084,
+      "rtf": 0.735111292498964,
+      "vad": false,
+      "text": "深入的分析这一次全球金融动荡背后的根源。",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 4.524375,
+          "text": "深入的分析这一次全球金融动荡背后的根源。"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 3070506,
+        "native_heap_bytes": 2472041840,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "3167128 kB",
+        "VmRSS_process": "3165492 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 3211702272,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "scenario-3models",
+      "recorded_at": "2026-10-15T20:21:28.947+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    }
+  ],
+  "failures": 0,
+  "environment_after": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 3211702272,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "run_id": "final-apk-smoke",
+  "kind": "benchmark",
+  "environment": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 5170212864,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  },
+  "status": "complete",
+  "entries": [
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "r2t2-official.wav",
+      "audio_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+      "audio_seconds": 6.74,
+      "load_ms": 2086.069845999591,
+      "inference_ms": 95.164,
+      "cpu_ms": 351,
+      "rtf": 0.014119287833827893,
+      "vad": false,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0,
+          "duration_s": 6.74,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 238387,
+        "native_heap_bytes": 147603664,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "340060 kB",
+        "VmRSS_process": "330768 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4979609600,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "final-apk-smoke",
+      "recorded_at": "2026-10-15T20:26:01.632+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    }
+  ],
+  "failures": 0,
+  "environment_after": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 4979609600,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  }
+}

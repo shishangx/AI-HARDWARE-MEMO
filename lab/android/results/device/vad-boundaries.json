@@ -1,0 +1,137 @@
+{
+  "run_id": "vad-boundaries",
+  "kind": "benchmark",
+  "environment": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 5120344064,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  },
+  "status": "complete",
+  "entries": [
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "silence-5s.wav",
+      "audio_sha256": "82f094972da287786fe1ffaec62618c6dc27cec9d8a582219ebb195eada54dae",
+      "audio_seconds": 5,
+      "load_ms": 2042.694077000022,
+      "inference_ms": 45.74023,
+      "cpu_ms": 49,
+      "rtf": 0.009148046,
+      "vad": true,
+      "text": "",
+      "segments": [],
+      "memory_after": {
+        "pss_kb": 236892,
+        "native_heap_bytes": 144003408,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "342652 kB",
+        "VmRSS_process": "330484 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4963762176,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "vad-boundaries",
+      "recorded_at": "2026-10-15T20:19:20.452+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    },
+    {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "speech-silence-speech.wav",
+      "audio_sha256": "9d78d2d4975794f361b1fe0104e12fa2d1f2d070a749e4fe10c056935d196c36",
+      "audio_seconds": 14.48,
+      "load_ms": 0,
+      "inference_ms": 286.014692,
+      "cpu_ms": 837,
+      "rtf": 0.01975239585635359,
+      "vad": true,
+      "text": "之前有顾客自己带酒水也没加收钱或者不让喝\n之前有顾客自己带酒水也没加收钱或者不让喝",
+      "segments": [
+        {
+          "start_s": 0.528,
+          "duration_s": 5.352,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        },
+        {
+          "start_s": 8.336,
+          "duration_s": 6.128,
+          "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 247452,
+        "native_heap_bytes": 148046288,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 99,
+        "plugged": 2,
+        "VmHWM_process": "353356 kB",
+        "VmRSS_process": "342368 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4955828224,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "round": 1,
+      "run_id": "vad-boundaries",
+      "recorded_at": "2026-10-15T20:19:20.774+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    }
+  ],
+  "failures": 0,
+  "environment_after": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 4955828224,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  }
+}

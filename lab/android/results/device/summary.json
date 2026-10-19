@@ -1,0 +1,426 @@
+{
+  "schema": "private-memo-android-experiment/v1",
+  "generated_at": "2026-10-16T10:45:26.675577+08:00",
+  "device": {
+    "manufacturer": "Solana Mobile Inc.",
+    "model": "Seeker",
+    "soc": "MT6878",
+    "android": "15",
+    "abi": [
+      "arm64-v8a"
+    ],
+    "total_mem_bytes": 7841644544,
+    "available_mem_bytes": 5177974784,
+    "airplane_mode": 1,
+    "active_network": false,
+    "internet_permission": false
+  },
+  "runtime": {
+    "package": "im.privatememo.lab",
+    "version": "0.6.0-lab",
+    "sherpa_onnx": "1.13.8",
+    "llama_cpp_commit": "ad6c66839af3c5646fba8c6c2e2087a1e4e38948",
+    "r2t2_context": 2048,
+    "backend": "CPU, 4 threads"
+  },
+  "artifact_hashes": {
+    "apk": {
+      "path": "lab/android/build/private-memo-lab.apk",
+      "bytes": 28189641,
+      "sha256": "2b620db6eebd23511b9689e5520eff55fb990b89113bf47b8fa055ab581b0202"
+    },
+    "paraformer_model": {
+      "path": "lab/android/models/paraformer/model.int8.onnx",
+      "bytes": 81828675,
+      "sha256": "3ef6c19369b912f7caf3cef8e545c5ccd1a33d9d7ec792a46668dc41c4b229ec"
+    },
+    "sensevoice_model": {
+      "path": "lab/android/models/sensevoice/model.int8.onnx",
+      "bytes": 237115547,
+      "sha256": "12ca1a2ae7ecf3e0019ef2822307ee0b5cadc9196569e379b4c4026f8205276d"
+    },
+    "silero_vad": {
+      "path": "lab/android/models/silero_vad.onnx",
+      "bytes": 643854,
+      "sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6"
+    },
+    "r2t2_model": {
+      "path": "lab/r2t2/models/gguf/Confucius4-R2T2-Q4_K_M.gguf",
+      "bytes": 1107404736,
+      "sha256": "fa3cb46c8c3a66a58812b9098ba6e96a0266d4e8c9b3cf5ba34432fd2f9f6466"
+    },
+    "r2t2_mmproj": {
+      "path": "lab/r2t2/models/gguf/mmproj-Confucius4-R2T2-Q8_0.gguf",
+      "bytes": 348336544,
+      "sha256": "8dc2c67e6a0484114928142d098db7ad94ae9f34c78948ef9d37a9678418cb65"
+    }
+  },
+  "transfer_integrity": {
+    "kind": "usb_transfer_integrity",
+    "checked_at": "2026-10-15T20:10:00+08:00",
+    "algorithm": "SHA-256",
+    "all_match": true,
+    "files": [
+      {
+        "name": "Confucius4-R2T2-Q4_K_M.gguf",
+        "host_sha256": "fa3cb46c8c3a66a58812b9098ba6e96a0266d4e8c9b3cf5ba34432fd2f9f6466",
+        "device_sha256": "fa3cb46c8c3a66a58812b9098ba6e96a0266d4e8c9b3cf5ba34432fd2f9f6466"
+      },
+      {
+        "name": "mmproj-Confucius4-R2T2-Q8_0.gguf",
+        "host_sha256": "8dc2c67e6a0484114928142d098db7ad94ae9f34c78948ef9d37a9678418cb65",
+        "device_sha256": "8dc2c67e6a0484114928142d098db7ad94ae9f34c78948ef9d37a9678418cb65"
+      },
+      {
+        "name": "paraformer/model.int8.onnx",
+        "host_sha256": "3ef6c19369b912f7caf3cef8e545c5ccd1a33d9d7ec792a46668dc41c4b229ec",
+        "device_sha256": "3ef6c19369b912f7caf3cef8e545c5ccd1a33d9d7ec792a46668dc41c4b229ec"
+      },
+      {
+        "name": "paraformer/tokens.txt",
+        "host_sha256": "4b2d964e18b9cf139b473003b6698fb2ed9a2a5ec55b93daa677b28f578897aa",
+        "device_sha256": "4b2d964e18b9cf139b473003b6698fb2ed9a2a5ec55b93daa677b28f578897aa"
+      },
+      {
+        "name": "sensevoice/model.int8.onnx",
+        "host_sha256": "12ca1a2ae7ecf3e0019ef2822307ee0b5cadc9196569e379b4c4026f8205276d",
+        "device_sha256": "12ca1a2ae7ecf3e0019ef2822307ee0b5cadc9196569e379b4c4026f8205276d"
+      },
+      {
+        "name": "sensevoice/tokens.txt",
+        "host_sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc",
+        "device_sha256": "f449eb28dc567533d7fa59be34e2abca8784f771850c78a47fb731a31429a1dc"
+      },
+      {
+        "name": "silero_vad.onnx",
+        "host_sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6",
+        "device_sha256": "9e2449e1087496d8d4caba907f23e0bd3f78d91fa552479bb9c23ac09cbb1fd6"
+      },
+      {
+        "name": "r2t2-official.wav",
+        "host_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67",
+        "device_sha256": "b703174ef013bf7332ab74d4b65d568e2981cff2633cb620252bb4ba18ea7f67"
+      }
+    ]
+  },
+  "repeated_official_sample": {
+    "sample": "r2t2-official.wav",
+    "audio_seconds": 6.74,
+    "runs": 9,
+    "failures": 0,
+    "models": {
+      "paraformer": {
+        "runs": 3,
+        "failures": 0,
+        "cold_load_ms": 2170.5449999999255,
+        "median_inference_ms": 94.063615,
+        "median_rtf": 0.013956025964391692,
+        "max_pss_kb": 245402,
+        "max_vm_hwm_process": 343580,
+        "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+      },
+      "sensevoice": {
+        "runs": 3,
+        "failures": 0,
+        "cold_load_ms": 2135.005615999922,
+        "median_inference_ms": 247.963384,
+        "median_rtf": 0.03678981958456973,
+        "max_pss_kb": 440776,
+        "max_vm_hwm_process": 539536,
+        "text": "之前有顾客自己带酒水也没加收钱或者不让喝"
+      },
+      "r2t2": {
+        "runs": 3,
+        "failures": 0,
+        "cold_load_ms": 2343.191308000125,
+        "median_inference_ms": 4552.896539,
+        "median_rtf": 0.675503937537092,
+        "max_pss_kb": 3054853,
+        "max_vm_hwm_process": 3158712,
+        "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。"
+      }
+    }
+  },
+  "scenario_suite": {
+    "runs": 12,
+    "failures": 0,
+    "entries": [
+      {
+        "model": "paraformer",
+        "sample": "para-0.wav",
+        "seconds": 5.6115,
+        "inference_ms": 85.235692,
+        "rtf": 0.015189466631025572,
+        "text": "对我做了介绍啊那么我想说的是呢大家如果对我的研究感兴趣呢嗯"
+      },
+      {
+        "model": "paraformer",
+        "sample": "para-2-zh-en.wav",
+        "seconds": 8.1,
+        "inference_ms": 147.951385,
+        "rtf": 0.01826560308641975,
+        "text": "yesterday was 星期一 today is tuesday 明天是星期三"
+      },
+      {
+        "model": "paraformer",
+        "sample": "para-3-sichuan.wav",
+        "seconds": 7.835,
+        "inference_ms": 113.230154,
+        "rtf": 0.014451838417358009,
+        "text": "自己就是在那个在那个就是在情节里面就是感觉是演的特别好就是好像很真实一样你知道吧"
+      },
+      {
+        "model": "paraformer",
+        "sample": "para-8k.wav",
+        "seconds": 4.524375,
+        "inference_ms": 69.702538,
+        "rtf": 0.015406003702168809,
+        "text": "深入的分析这一次全球金融动荡背后的根源"
+      },
+      {
+        "model": "sensevoice",
+        "sample": "para-0.wav",
+        "seconds": 5.6115,
+        "inference_ms": 213.364923,
+        "rtf": 0.038022796578454955,
+        "text": "对我做了介绍啊那么我想说的是呢大家如果对我的研究感兴趣呢"
+      },
+      {
+        "model": "sensevoice",
+        "sample": "para-2-zh-en.wav",
+        "seconds": 8.1,
+        "inference_ms": 306.470769,
+        "rtf": 0.037835897407407414,
+        "text": "ESTERDAY WAS 星期一 TODAY IS TUESDAY 明天是星期三"
+      },
+      {
+        "model": "sensevoice",
+        "sample": "para-3-sichuan.wav",
+        "seconds": 7.835,
+        "inference_ms": 294.174769,
+        "rtf": 0.037546237268666245,
+        "text": "自己就是在那个在那个就是在情节里面就是感觉是演得特别好就是好像很真实一样你知道吧"
+      },
+      {
+        "model": "sensevoice",
+        "sample": "para-8k.wav",
+        "seconds": 4.524375,
+        "inference_ms": 176.291923,
+        "rtf": 0.038964922889901915,
+        "text": "深入的分析这一次全球金融动荡背后的根源"
+      },
+      {
+        "model": "r2t2",
+        "sample": "para-0.wav",
+        "seconds": 5.6115,
+        "inference_ms": 4374.431616,
+        "rtf": 0.7795476460839347,
+        "text": "对我做了介绍啊，那么我想说的是呢，大家如果对我的研究感兴趣呢，"
+      },
+      {
+        "model": "r2t2",
+        "sample": "para-2-zh-en.wav",
+        "seconds": 8.1,
+        "inference_ms": 5476.181308,
+        "rtf": 0.6760717664197531,
+        "text": "Yesterday was星期一，Today is Tuesday，明天是星期三。"
+      },
+      {
+        "model": "r2t2",
+        "sample": "para-3-sichuan.wav",
+        "seconds": 7.835,
+        "inference_ms": 5739.456692,
+        "rtf": 0.7325407392469687,
+        "text": "自己就是在那个在那个就是在情节里面，就是感觉是演得特别好，就是好像很真实一样，你知道吧？"
+      },
+      {
+        "model": "r2t2",
+        "sample": "para-8k.wav",
+        "seconds": 4.524375,
+        "inference_ms": 3325.919154,
+        "rtf": 0.735111292498964,
+        "text": "深入的分析这一次全球金融动荡背后的根源。"
+      }
+    ]
+  },
+  "duration_boundary": {
+    "recording_limit_seconds": 300,
+    "runs": 9,
+    "failures": 0,
+    "segmentation": "VAD segments up to 15 seconds; fixed 15-second chunks when VAD is disabled",
+    "entries": [
+      {
+        "model": "paraformer",
+        "seconds": 30,
+        "inference_ms": 565.304,
+        "rtf": 0.018843466666666666,
+        "pss_kb": 251428,
+        "battery_temp_c": 29
+      },
+      {
+        "model": "paraformer",
+        "seconds": 120,
+        "inference_ms": 2168.537154,
+        "rtf": 0.01807114295,
+        "pss_kb": 274999,
+        "battery_temp_c": 29
+      },
+      {
+        "model": "paraformer",
+        "seconds": 300,
+        "inference_ms": 5392.11177,
+        "rtf": 0.0179737059,
+        "pss_kb": 304950,
+        "battery_temp_c": 29
+      },
+      {
+        "model": "sensevoice",
+        "seconds": 30,
+        "inference_ms": 1128.518462,
+        "rtf": 0.03761728206666667,
+        "pss_kb": 484502,
+        "battery_temp_c": 29
+      },
+      {
+        "model": "sensevoice",
+        "seconds": 120,
+        "inference_ms": 4405.067308,
+        "rtf": 0.03670889423333333,
+        "pss_kb": 505926,
+        "battery_temp_c": 29
+      },
+      {
+        "model": "sensevoice",
+        "seconds": 300,
+        "inference_ms": 10898.111693,
+        "rtf": 0.03632703897666667,
+        "pss_kb": 479078,
+        "battery_temp_c": 29
+      },
+      {
+        "model": "r2t2",
+        "seconds": 30,
+        "inference_ms": 21203.029232,
+        "rtf": 0.7067676410666668,
+        "pss_kb": 3086223,
+        "battery_temp_c": 29
+      },
+      {
+        "model": "r2t2",
+        "seconds": 120,
+        "inference_ms": 82873.562467,
+        "rtf": 0.6906130205583333,
+        "pss_kb": 3106667,
+        "battery_temp_c": 31
+      },
+      {
+        "model": "r2t2",
+        "seconds": 300,
+        "inference_ms": 213423.872243,
+        "rtf": 0.7114129074766666,
+        "pss_kb": 3160251,
+        "battery_temp_c": 34
+      }
+    ],
+    "fixed_chunk_fallback": {
+      "failures": 0,
+      "model": "r2t2",
+      "seconds": 30,
+      "segments": 2,
+      "segmentation": "fixed_15s"
+    }
+  },
+  "vad": {
+    "silence_text_empty": true,
+    "speech_silence_speech_segments": 2,
+    "speech_silence_speech_text": "之前有顾客自己带酒水也没加收钱或者不让喝\n之前有顾客自己带酒水也没加收钱或者不让喝"
+  },
+  "microphone": {
+    "wav": {
+      "sample_rate": 16000,
+      "channels": 1,
+      "sample_width_bits": 16,
+      "duration_seconds": 4.6,
+      "samples": 73600,
+      "peak_dbfs": -9.807799327202781,
+      "rms_dbfs": -30.917872612547654,
+      "sha256": "7e5dcc0ace1f81cdbb21b219dceb7ddc6979a98908ae9f0981992db606ef380b"
+    },
+    "transcription": {
+      "kind": "asr",
+      "model": "paraformer",
+      "backend": "cpu",
+      "threads": 4,
+      "sample": "record-1792066627925.wav",
+      "audio_sha256": "7e5dcc0ace1f81cdbb21b219dceb7ddc6979a98908ae9f0981992db606ef380b",
+      "audio_seconds": 4.6,
+      "load_ms": 2040.1624619998038,
+      "inference_ms": 107.589154,
+      "cpu_ms": 237,
+      "rtf": 0.023388946521739132,
+      "vad": true,
+      "text": "这给我看哪来了",
+      "segments": [
+        {
+          "start_s": 1.232,
+          "duration_s": 3.344,
+          "text": "这给我看哪来了"
+        }
+      ],
+      "memory_after": {
+        "pss_kb": 241667,
+        "native_heap_bytes": 147672816,
+        "thermal_status": 0,
+        "battery_temp_c": 31,
+        "battery_level": 98,
+        "plugged": 2,
+        "VmHWM_process": "342360 kB",
+        "VmRSS_process": "334476 kB"
+      },
+      "environment": {
+        "manufacturer": "Solana Mobile Inc.",
+        "model": "Seeker",
+        "soc": "MT6878",
+        "android": "15",
+        "abi": [
+          "arm64-v8a"
+        ],
+        "total_mem_bytes": 7841644544,
+        "available_mem_bytes": 4954767360,
+        "airplane_mode": 1,
+        "active_network": false,
+        "internet_permission": false
+      },
+      "recorded_at": "2026-10-15T20:18:42.020+08:00",
+      "device": "Seeker",
+      "android_api": 35
+    }
+  },
+  "crypto": {
+    "android": {
+      "roundtrip": true,
+      "tamper_rejected": true,
+      "qr_roundtrip": true
+    },
+    "python_crosscheck": {
+      "decrypt_matches": true,
+      "encrypt_blob_matches": true,
+      "content_hash_matches": true,
+      "timestamp_tamper_rejected": true,
+      "android_tamper_rejected": true,
+      "android_qr_roundtrip": true
+    }
+  },
+  "provisional_selection": {
+    "android_prototype_default": "paraformer",
+    "reason": "All three models preserved the meaning of the available samples; Paraformer used the least memory and had the lowest latency.",
+    "r2t2_role": "quality comparator until an independent labelled set shows whether punctuation or accuracy gains justify its memory and latency",
+    "sensevoice_role": "candidate when multilingual, emotion or audio-event outputs are explicitly required and independently tested",
+    "final_hardware_model_selected": false
+  },
+  "evidence_limits": [
+    "This is a Solana Seeker (MT6878), not the proposed RK3576 board.",
+    "Scenario audio is vendor-supplied and is not an independent CER/WER benchmark.",
+    "Power draw, battery runtime, RKNN/NPU, physical buttons/display and wallet transaction broadcast were not tested."
+  ]
+}

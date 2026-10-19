@@ -1,0 +1,1415 @@
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+[1/2] Building CXX object CMakeFiles/memo_native.dir/memo_native.cpp.o
+[2/2] Linking CXX shared library libmemo_native.so
+警告: [options] 未与 -source 11 一起设置系统模块路径
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/AudioCaptureService.java:1: 错误: 需要<标识符>
+package im.private.memo.lab;
+           ^
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java:1: 错误: 需要<标识符>
+package im.private.memo.lab;
+           ^
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MemoCrypto.java:1: 错误: 需要<标识符>
+package im.private.memo.lab;
+           ^
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/NativeAsr.java:1: 错误: 需要<标识符>
+package im.private.memo.lab;
+           ^
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/Wav.java:1: 错误: 需要<标识符>
+package im.private.memo.lab;
+           ^
+5 个错误
+1 个警告
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+1 个警告
+正在为以下对象生成 2,048 位RSA密钥对和自签名证书 (SHA256withRSA) (有效期为 3,650 天):
+	 CN=Private Memo Lab
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+[1/2] Building CXX object CMakeFiles/memo_native.dir/memo_native.cpp.o
+[2/2] Linking CXX shared library libmemo_native.so
+警告: [options] 未与 -source 11 一起设置系统模块路径
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java:119: 错误: 未报告的异常错误JSONException; 必须对其进行捕获或声明以便抛出
+    row("加密与二维码自检","固定测试密钥，仅验证实现，不可用于真实存证",()->task(()->{JSONObject j=cryptoTest();main.post(()->showInfo("加密自检",j.toString(2),this::showWallet));}));
+                                                                                                                           ^
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java:181: 错误: 未报告的异常错误JSONException; 必须对其进行捕获或声明以便抛出
+    else if(action.equals("crypto"))task(()->{JSONObject j=cryptoTest();main.post(()->showInfo("加密自检",j.toString(2),this::showHome));});
+                                                                                                                ^
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+2 个错误
+1 个警告
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/resources.zip@values_colors.arsc.flat: error: resource color/icon_background does not override an existing resource.
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/resources.zip@values_colors.arsc.flat: note: define an <add-resource> tag or use --auto-add-overlay.
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/resources.zip@values_colors.arsc.flat: error: failed to merge resource table.
+error: failed parsing overlays.
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/resources.zip@values_colors.arsc.flat: error: resource color/icon_background does not override an existing resource.
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/resources.zip@values_colors.arsc.flat: note: define an <add-resource> tag or use --auto-add-overlay.
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/resources.zip@values_colors.arsc.flat: error: failed to merge resource table.
+error: failed parsing overlays.
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+/Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java:125: 错误: 找不到符号
+    new AlertDialog.Builder(this).setTitle("重命名录音").setMessage("输入新名称；扩展名 .wav 会自动保留。").setView(input).setNegativeButton("取消",null).setPositiveButton("保存",null).setOnShowListener(dialog->{AlertDialog a=(AlertDialog)dialog;a.getButton(AlertDialog.BUTTON_POSITIVE).setOnClickListener(v->{
+                                                                                                                                                                ^
+  符号:   方法 setOnShowListener((dialog)->[...]}); })
+  位置: 类 Builder
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个错误
+1 个警告
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/src/MainActivity.java使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+[1/2] Building CXX object CMakeFiles/memo_native.dir/memo_native.cpp.o
+[2/2] Linking CXX shared library libmemo_native.so
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+[1/2] Building CXX object CMakeFiles/memo_native.dir/memo_native.cpp.o
+[2/2] Linking CXX shared library libmemo_native.so
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+[1/2] Building CXX object CMakeFiles/memo_native.dir/memo_native.cpp.o
+[2/2] Linking CXX shared library libmemo_native.so
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+-- llama.cpp version: 0.4.0-dev
+CMAKE_BUILD_TYPE=Release
+-- Setting GGML_NATIVE_DEFAULT to OFF
+-- Warning: ccache not found - consider installing it for faster compilation or disable this warning with GGML_CCACHE=OFF
+-- CMAKE_SYSTEM_PROCESSOR: aarch64
+-- GGML_SYSTEM_ARCH: ARM
+-- Including CPU backend
+-- ARM detected
+-- Checking for ARM features using flags:
+--   -march=armv8.2-a+dotprod
+-- Adding CPU backend variant ggml-cpu: -march=armv8.2-a+dotprod 
+-- ggml version: 0.23.0
+-- ggml commit:  ad6c66839
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /Users/imtoken-ljm/Desktop/test1/AI_PRJ/idea/AI-HARDWARE/lab/android/build/native
+ninja: no work to do.
+警告: [options] 未与 -source 11 一起设置系统模块路径
+注: 某些输入文件使用或覆盖了已过时的 API。
+注: 有关详细信息, 请使用 -Xlint:deprecation 重新编译。
+1 个警告
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1

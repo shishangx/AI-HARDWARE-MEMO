@@ -1,0 +1,17 @@
+{
+  "platform": "Linux-7.0.14-orbstack-00380-ga7e0a2dc9535-aarch64-with-glibc2.43",
+  "environment": "OrbStack companion-dev, Ubuntu 26.04, aarch64, 9 vCPU, 15 GiB RAM",
+  "ctx": 2048,
+  "batch": 512,
+  "threads": 8,
+  "cpu_only": true,
+  "model_bytes": 1107404736,
+  "mmproj_bytes": 348336544,
+  "audio_seconds": 6.74,
+  "load_seconds": 2.67978736711666,
+  "infer_seconds": [1.6478642059955746, 0.938205222832039, 0.9073311369866133],
+  "stable_rtf": 0.13461886305439366,
+  "max_rss_after_load_bytes": 2888716288,
+  "max_rss_final_bytes": 3061567488,
+  "text": "之前有顾客自己带酒水，也没加收钱或者不让喝。"
+}
