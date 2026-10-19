@@ -247,6 +247,8 @@ OrbStack 只能验证 Linux ARM64 用户态，不能代替 RK3576 的 CPU、NPU�
 
 恢复：钱包与二维码 → 恢复链上记录 → 原配对钱包扫码 → 恢复声明签名一次 → 查询 owner 的事件与交易 → 核对摘要 → 浏览器本地解密。关闭网页后，可随时从设备重新生成恢复二维码；恢复不依赖浏览器历史或保存交易哈希。恢复读取本身不消耗 gas，不输入钱包助记词。
 
+**旧设备丢失或损坏时：**无需从旧设备生成二维码，直接在 imToken 的 DApp 浏览器打开[测试网恢复网页](https://ai-hardware-gamma.vercel.app/?from=0x2df3da5#r=eyJ2IjoxLCJjaGFpbklkIjo4NDUzMiwiY29udHJhY3QiOiIweDI3MzdGQWVkQmY2MjVCRjMyMDY5QTdhMDc2QTZDNDI2NDQyOTIyNzgiLCJrZXlTY2hlbWUiOiJ3YWxsZXQtc2lnbmF0dXJlLXYxIn0)，连接原配对钱包后点击“钱包签名并恢复记录”。链接已预填 Base Sepolia 与当前合约，复制时需保留完整的 `#r=` 载荷；只打开域名首页无法进入恢复模式。完整步骤、配置和恢复范围见 [Android README：设备丢失或损坏时的恢复入口](lab/android/README.md#设备丢失或损坏时的恢复入口)。仅已成功上链的文本可恢复，本地原始录音与摘要尚未备份。
+
 | 操作 / 文件 | 行为与注意点 |
 | :--- | :--- |
 | 更换配对钱包 | 长按“已配对钱包”卡片并二次确认清除，再用新钱包签两次；旧记录仍须旧钱包恢复，不自动迁移 |

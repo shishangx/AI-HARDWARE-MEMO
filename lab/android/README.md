@@ -485,6 +485,32 @@ adb -s "$ANDROID_SERIAL" pull \
 部署快照：[`../../web3/dist-page/`](../../web3/dist-page/)
 测试地址：`https://ai-hardware-gamma.vercel.app/`
 
+#### 设备丢失或损坏时的恢复入口
+
+即使旧设备无法开机，也可以在另一台联网手机上，通过 **imToken 的 DApp 浏览器**直接打开这个[测试网恢复网页](https://ai-hardware-gamma.vercel.app/?from=0x2df3da5#r=eyJ2IjoxLCJjaGFpbklkIjo4NDUzMiwiY29udHJhY3QiOiIweDI3MzdGQWVkQmY2MjVCRjMyMDY5QTdhMDc2QTZDNDI2NDQyOTIyNzgiLCJrZXlTY2hlbWUiOiJ3YWxsZXQtc2lnbmF0dXJlLXYxIn0)。复制此链接时应包含 `#r=` 及其后的完整内容；仅打开上面的域名首页会提示“缺少载荷”。
+
+这个链接已经预填以下公开配置，不需要从旧设备重新生成二维码，也不包含钱包私钥、配对密钥或个人录音：
+
+| 配置 | 示例值 |
+| :--- | :--- |
+| 网络 | Base Sepolia 测试网，chain ID `84532` |
+| 合约 | `0x2737FAedBf625BF32069A7a076A6C42644292278` |
+| 部署块 | `0x2df3da5` |
+| 密钥方案 | `wallet-signature-v1` |
+| 记录所属地址 owner | 不预填；连接钱包后使用当前钱包地址 |
+| 只读 RPC | 不预填；优先使用 imToken 注入的 Provider |
+
+操作步骤：
+
+1. 在 imToken 中切换到**当初配对并提交记录的同一钱包地址**，用 DApp 浏览器打开上述完整链接。
+2. 点击“连接钱包”，检查页面中的链 ID 和合约与原记录一致。当前页面通过链接预填网络和合约，**没有单独选择网络、合约的菜单**。
+3. 点击“钱包签名并恢复记录”，按钱包提示切换到 Base Sepolia，并对恢复声明签名一次。这是消息签名，不广播交易、不消耗 gas；不需要输入助记词或私钥。
+4. 网页按钱包地址查询批次区块、事件和交易密文，校验摘要后在浏览器本地解密。恢复出的文本可以复制保存。
+
+这条示例链接适用于上述测试网合约中的 `wallet-signature-v1` 记录。旧合约、其他网络或其他密钥方案的记录，需要使用与其原始配对一致的配置；更换新合约不能恢复旧合约中的记录。正式产品应在自有域名提供固定的恢复入口，并保留历史配置。
+
+**恢复范围：**仅能找回已经成功上链且链上历史仍可读取的转写文本。仅生成二维码、尚未确认上链的内容，以及只保存在旧设备中的原始 WAV 和摘要，不在当前恢复范围内。
+
 ### 9.2 为什么所有用户可以使用同一个合约
 
 合约以真实交易发送者 `msg.sender` 作为 owner。不同钱包写入同一个 MemoryRegistry，但索引分别存放在各自地址下；恢复页还会同时按合约地址和 owner topic 过滤事件。因此用户 A 不能把记录写进用户 B 的地址空间，也不能覆盖 B 的记录。
