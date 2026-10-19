@@ -1,0 +1,10 @@
+{
+  "duration_seconds": 106,
+  "video_frames": 3180,
+  "audio_sample_rate": 48000,
+  "audio_packets": 4970,
+  "max_audio_packet_duration_seconds": 0.021333,
+  "max_audio_packet_gap_seconds": 1.000000010176888e-06,
+  "nonoverlapping_subtitles": 24,
+  "result": "pass"
+}
