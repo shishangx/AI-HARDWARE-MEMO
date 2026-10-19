@@ -34,3 +34,7 @@ lab/android/results/device/latest-qr.png
 lab/android/results/device/recordings/
 lab/.pairing
 lab/recordings/
+
+# Publish only the finished v2 video; keep production assets local.
+docs/media/private-memo-promo-v2/*
+!docs/media/private-memo-promo-v2/*.mp4
